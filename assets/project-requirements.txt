@@ -1,0 +1,16 @@
+*** PROJECT 6 ***
+
+Beaus would like to hire you to create an application that highlights their seasonal beverages. Lug Tread is the core product, so we want the beers shown to be all beers excluding Lug Tread.
+
+We want you to display the beers out there, when a user selects one we want you to provide a short description and the stores that carry this beer. If there is time, also provide a feature that allows the user to get directions to the store they pick.
+
+API URL: https://lcboapi.com/
+
+Deadline:
+­ Wireframes by Wed May 25
+­ Beta by Thu May 26
+­ Final by Mon May 30
+
+Deliverables:
+­ Project up on GitHub
+­ Project online (can be GitHub Pages)
