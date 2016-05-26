@@ -9,6 +9,8 @@ beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2Z
 
 beausBeers.beerArray = [];
 
+beausBeers.beerArray
+
 beausBeers.init = function(){
 	beausBeers.getData();
 };
