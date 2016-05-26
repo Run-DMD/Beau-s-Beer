@@ -197,8 +197,6 @@ header {
     width: 10%; }
 
 .beer-options {
-  display: -ms-flexbox;
-  display: flex;
   background: #a4baba; }
   .beer-options .dropdown-menus {
     display: -ms-flexbox;
