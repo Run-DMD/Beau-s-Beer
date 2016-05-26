@@ -41,13 +41,13 @@ gulp.task('styles', function(){
 gulp.task('watch', function(){
 	//find any sass files and when they are changed we want to do something
 	gulp.watch('./dev/styles/**/*.scss', ['styles']);
-	gulp.watch('./dev/scripts/main.js', ['scripts']);
+	gulp.watch('./dev/scripts/script.js', ['scripts']);
 	gulp.watch('./public/*.html', reload);
 });
 
 gulp.task('scripts', function(){
 	//gathers up a set of files (or one file) source
-	return gulp.src('./dev/scripts/main.js')
+	return gulp.src('./dev/scripts/script.js')
 		//piping it through the babel function
 		.pipe(babel({
 			presets:['es2015']

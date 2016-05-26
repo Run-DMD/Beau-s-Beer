@@ -174,3 +174,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 * {
   box-sizing: border-box; }
+
+body {
+  background-color: green; }
