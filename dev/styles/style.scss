@@ -1,5 +1,48 @@
 @import "setup";
 
-body {
-	background-color: green;
+// Generic Styles
+
+.wrapper {
+	max-width: 1280px;
+	padding: 0;
+	margin: 0;
 }
+
+body {
+	background: #C4A077;
+}
+
+header {
+	background: #512b1b;
+	width: 100vw;
+	height: 50px;
+	display: flex;
+
+	.left-info {
+		width: 60%;
+	}
+
+	.right-image {
+		width: 30%;
+	}
+
+	.center-arrow {
+		width: 10%;
+	}
+}
+
+
+.beer-options {
+	display: flex;
+	background: #a4baba;
+
+	.dropdown-menus {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+	}
+
+}
+
+
+
