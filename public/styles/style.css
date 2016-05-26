@@ -175,5 +175,34 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+.wrapper {
+  max-width: 1280px;
+  padding: 0;
+  margin: 0; }
+
 body {
-  background-color: green; }
+  background: #C4A077; }
+
+header {
+  background: #512b1b;
+  width: 100vw;
+  height: 50px;
+  display: -ms-flexbox;
+  display: flex; }
+  header .left-info {
+    width: 60%; }
+  header .right-image {
+    width: 30%; }
+  header .center-arrow {
+    width: 10%; }
+
+.beer-options {
+  display: -ms-flexbox;
+  display: flex;
+  background: #a4baba; }
+  .beer-options .dropdown-menus {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
