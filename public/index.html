@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 	<title>Beau's Seasonal Beers</title>
@@ -33,9 +33,13 @@
 			  <option value="">OPTION THREE</option>
 			</select>
 		</div>
-		<div class='beers-container'>
-			<figure class='beer-item'></figure>
-							
+		<div class="beers-container">
+			<div id="beers-desktop">
+				<!-- Filled out using Handlebars template -->
+			</div>
+			<div id="beers-mobile">
+				<!-- Filled out using Handlebars template -->
+			</div>
 		</div>
 	</section>
 	<!-- MAP -->
@@ -53,6 +57,25 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<!-- Handlebars desktopTemplate -->
+	<script id="desktopTemplate" type="x-handlebars-template">
+		<figure>
+			<figcaption class="beer-name">{{name}}</figcaption>
+		</figure>
+	</script>
+
+	<!-- Handlebars mobileTemplate -->
+	<script id="mobileTemplate" type="x-handlebars-template">
+		<details>
+			<summary>
+				<figcaption class="beer-name">{{name}}</figcaption>
+			</summary>
+		</details>
+	</script>
+
 	<script src="scripts/script.js"></script>
 </body>
 </html>

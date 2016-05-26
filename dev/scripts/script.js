@@ -49,6 +49,23 @@ beausBeers.dataArray = function(beerResult){
 	// console.log('Working');
 	console.log(beausBeers.beerArray);
 
+	beausBeers.templates();
+};
+
+beausBeers.templates = function() {
+	var desktopTemplate = $("#desktopTemplate").html();
+	var compiledDT = Handlebars.compile(desktopTemplate);
+	beausBeers.beerArray.forEach(function(beer) {
+		var filledDT = compiledDT(beer);
+		$("#beers-desktop").append(filledDT);
+	});
+
+	var mobileTemplate = $("#mobileTemplate").html();
+	var compiledMT = Handlebars.compile(mobileTemplate);
+	beausBeers.beerArray.forEach(function(beer) {
+		var filledMT = compiledMT(beer);
+		$("#beers-mobile").append(filledMT);
+	});
 };
 
 $(document).ready(function(){
