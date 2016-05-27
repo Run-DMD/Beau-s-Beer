@@ -12,7 +12,7 @@ beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2Z
 //creating our beer Array in our main object. Beers returned from the ajax call will be stored here
 beausBeers.beerArray = [];
 
-const beerDescription = [
+const beerDetails = [
 	{
 		name: "Best of Beau's 2015",
 		description: "The 'Best of Beau's' Mix is a holiday mix pack featuring an eclectic mix of our most sought after one-off creations. All four beers were chosen through popular vote, by those who know best – our fans!",
@@ -168,11 +168,22 @@ beausBeers.dataArray = function(beerResult){
 		// console.log(beausBeers.uniqueBeerType);
 	});
 
+	for(let x = 0; x < beausBeers.beerArray.length; x++){
+		for(let i = 0; i < beerDetails.length; i++){
+			if(beausBeers.beerArray[x].name = beerDetails[i].name){
+				beausBeers.beerArray[x].description = beerDetails[i].description,
+				beausBeers.beerArray[x].image = beerDetails[i].image
+			};
+		};
+	};
+	
+	console.log(beausBeers.beerArray);
 	beausBeers.fillSelectors();
 	beausBeers.templates();
 };
 
 beausBeers.fillSelectors = function(){
+	//filling selectors by putting all option and pushing our unique properties for style and type
 	$('#beer-style').empty();
 	$('#beer-strength').empty();
 	$('#beer-type').empty();
@@ -190,10 +201,10 @@ beausBeers.fillSelectors = function(){
 		$('#beer-strength').append(('<option value"' + Strength + '">' + Strength + '</option>'));
 	};
 
-	console.log(beausBeers.uniqueBeerType);
+	// console.log(beausBeers.uniqueBeerType);
 	for(let i = 0; i < beausBeers.uniqueBeerType.length; i++){
 		$('#beer-type').append(('<option value"' + beausBeers.uniqueBeerType[i] + '">' + beausBeers.uniqueBeerType[i] + '</option>'));
-		console.log('working');
+		// console.log('working');
 	};
 };
 
