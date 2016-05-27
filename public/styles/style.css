@@ -186,13 +186,6 @@ h1 {
   font-weight: bold;
   letter-spacing: 3px; }
 
-h1 {
-  font-size: 32px;
-  font-size: 3.2rem;
-  font-family: "Abril Fatface", cursive;
-  font-weight: bold;
-  letter-spacing: 3px; }
-
 h2 {
   font-size: 22px;
   font-size: 2.2rem;
@@ -268,8 +261,7 @@ header {
   height: 100vh;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
-  padding: 0 5% 0 0; }
+  overflow: hidden; }
   header .wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -323,15 +315,40 @@ header {
       border: 0;
       outline: #a4baba;
       height: 34px; }
-  .beer-options #beers-desktop {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .beer-options #beers-desktop figure {
-      width: calc(33.3% - 20px);
-      margin: 10px 10px;
-      padding-bottom: calc(33.3% - 20px); }
+
+#beers-desktop {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #beers-desktop figure {
+    width: calc(33.3% - 20px);
+    margin: 10px 10px;
+    padding-bottom: calc(33.3% - 20px); }
+
+#beers-mobile details {
+  border: 1px solid black;
+  margin-bottom: 10px; }
+  #beers-mobile details:before {
+    content: ""; }
+
+#beers-mobile details summary::-webkit-details-marker {
+  display: none; }
+
+#beers-mobile summary div {
+  font-size: 14px;
+  font-size: 1.4rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+#beers-mobile img {
+  max-height: 75px;
+  max-width: 75px; }
+
+#beers-mobile figcaption {
+  margin-left: 10px; }
 
 footer {
   width: 100%;

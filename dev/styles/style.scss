@@ -54,7 +54,7 @@ header {
 	height: 100vh;
 	display: flex;
 	overflow: hidden;
-	padding: 0 5% 0 0;
+	// padding: 0 5% 0 0;
 	
 	.wrapper{
 		display: flex;
@@ -118,16 +118,42 @@ header {
 			height: 34px;			
 		}
 	}
+}
+// #beers-desktop
+#beers-desktop {
+	display:flex;
+	flex-wrap:wrap;
 
-	#beers-desktop {
-		display:flex;
-		flex-wrap:wrap;
+	figure {
+		width:calc(33.3% - 20px);
+		margin:10px 10px;
+		padding-bottom:calc(33.3% - 20px);
+	}
+}
 
-		figure {
-			width:calc(33.3% - 20px);
-			margin:10px 10px;
-			padding-bottom:calc(33.3% - 20px);
+// #beers-mobile
+#beers-mobile {
+	details {
+		border: 1px solid black;
+		margin-bottom: 10px;
+		&:before {
+			content: "";
 		}
+	}
+	details summary::-webkit-details-marker {
+		display: none;
+	}
+	summary div {
+		@include font-size(14);
+		display: flex;
+		align-items: center;
+	}
+	img {
+		max-height: 75px;
+		max-width: 75px;
+	}
+	figcaption {
+		margin-left: 10px;
 	}
 }
 
