@@ -12,6 +12,21 @@ beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2Z
 //creating our beer Array in our main object. Beers returned from the ajax call will be stored here
 beausBeers.beerArray = [];
 
+//Beer properties (from object returned from ajax call)
+beausBeers.beerStyle = [];
+
+beausBeers.uniqueBeerStyle = [];
+
+beausBeers.beerStrength = {
+	All: 'All',
+	Light: 'Light',
+	Strong: 'Strong'
+};
+
+beausBeers.beerType = [];
+
+beausBeers.uniqueBeerType = [];
+
 const beerDetails = [
 	{
 		name: "Best of Beau's 2015",
@@ -95,20 +110,7 @@ const beerDetails = [
 	},
 ];
 
-//Beer properties (from object returned from ajax call)
-beausBeers.beerStyle = [];
-
-beausBeers.uniqueBeerStyle = [];
-
-beausBeers.beerStrength = {
-	All: 'All',
-	Light: 'Light',
-	Strong: 'Strong'
-};
-
-beausBeers.beerType = [];
-
-beausBeers.uniqueBeerType = [];
+beausBeers.userChoices = [];
 
 //init function
 beausBeers.init = function(){
@@ -170,13 +172,13 @@ beausBeers.dataArray = function(beerResult){
 
 	for(let x = 0; x < beausBeers.beerArray.length; x++){
 		for(let i = 0; i < beerDetails.length; i++){
-			if(beausBeers.beerArray[x].name = beerDetails[i].name){
+			if(beausBeers.beerArray[x].name === beerDetails[i].name){
 				beausBeers.beerArray[x].description = beerDetails[i].description,
 				beausBeers.beerArray[x].image = beerDetails[i].image
 			};
 		};
 	};
-	
+
 	console.log(beausBeers.beerArray);
 	beausBeers.fillSelectors();
 	beausBeers.templates();
@@ -206,6 +208,8 @@ beausBeers.fillSelectors = function(){
 		$('#beer-type').append(('<option value"' + beausBeers.uniqueBeerType[i] + '">' + beausBeers.uniqueBeerType[i] + '</option>'));
 		// console.log('working');
 	};
+
+	beausBeers.userInput();
 };
 
 beausBeers.templates = function() {
@@ -223,6 +227,33 @@ beausBeers.templates = function() {
 		$("#beers-mobile").append(filledMT);
 	});
 };
+
+//following functions sorts beers based on user input
+
+beausBeers.userInput = function(){
+//listening to change in the form
+
+$('#beer-style, #beer-strength, #beer-type').on('change', function(){
+	beausBeers.userChoices = [];
+	let userStyle = $('#beer-style').val();
+	let userStrength = $('#beer-strength').val();
+	let userType = $('#beer-type').val();
+	// console.log(userStyle + userStrength + userType);
+	if(userStyle !== 'All'){
+		beausBeers.userChoices.style = userStyle;
+	};
+
+	if(userStrength !== 'All'){
+		beausBeers.userChoices.strength = userStrength;
+	};
+
+	if(userType !== 'All'){
+		beausBeers.userChoices.type = userType;
+	};
+	console.log(beausBeers.userChoices);
+});
+
+}
 
 $(document).ready(function(){
 	beausBeers.init();
