@@ -1,11 +1,14 @@
 @import "setup";
 
+@import "typography";
+
 // Generic Styles
 
 .wrapper {
-	max-width: 1280px;
+	max-width: 1100px;
+	width:90%;
 	padding: 0;
-	margin: 0;
+	margin:0 auto;
 }
 
 html {
@@ -56,6 +59,7 @@ a:hover
 header {
 	background: #f4debd;
 	width: 100%;
+<<<<<<< HEAD
 	height: 100vh;
 	display: flex;
 	overflow: hidden;
@@ -64,33 +68,50 @@ header {
 	.left-info {
 		display: flex;
 		width: 45%;
+=======
+>>>>>>> 9ee9e795fb12012b02837bb71c503b4b5723bb76
 
-		.content {
-			margin: auto;
+	.wrapper{
+		display: flex;
+		padding: 0 5% 0 0;
+		
+		
+		.left-info {
+			display: flex;
+			width: 45%;
+
+			.content {
+				margin: auto;
+			}
 		}
-	}
 
 
+<<<<<<< HEAD
 	.right-image {
 		display: flex;
 		align-self: flex-end;
 		width: 45%;	
+=======
+		.right-image {
+			width: 45%;	
+>>>>>>> 9ee9e795fb12012b02837bb71c503b4b5723bb76
 
-		.main-image img{
-			width: 65%;
-			display: block;
-			float: right;
+			.main-image img{
+				width: 65%;
+				display: block;
+				float: right;
+			}
 		}
-	}
 
-	.center-arrow {
-		display: flex;
-		width: 10%;
-		justify-content: center;
-		align-self: flex-end;
-		margin-bottom: 3%;
-		font-size: 5rem;
-		color: #c4a077;
+		.center-arrow {
+			display: flex;
+			width: 10%;
+			justify-content: center;
+			align-self: flex-end;
+			margin-bottom: 3%;
+			font-size: 5rem;
+			color: #c4a077;
+		}
 	}
 }
 
@@ -162,6 +183,7 @@ footer {
 			// border-right: 1px solid #a4baba;
 			}
 	}
+<<<<<<< HEAD
 
 
 
@@ -174,7 +196,19 @@ footer {
 			margin: auto;
 		}
 
+=======
+>>>>>>> 9ee9e795fb12012b02837bb71c503b4b5723bb76
 }
 
+#beers-desktop{
+	display:flex;
+	flex-wrap:wrap;
+
+	figure{
+		width:calc(33.3% - 20px);
+		margin:10px 10px;
+		padding-bottom:calc(33.3% - 20px);
+	}
+}
 
 

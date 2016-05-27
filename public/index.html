@@ -9,6 +9,7 @@
 </head>
 	<!-- HEADER -->
 <header>
+	<div class="wrapper">
 		<div class='left-info'>
 			<div class='content'>
 				<figure class='logo'>
@@ -25,34 +26,38 @@
 			<figure class='main-image'>
 				<img src="images/bottle.png" alt="Beaus beer bottle on side of page">
 			</figure>
-		</div>		
+		</div>
+	</div>
 </header>
 <body>
 	<!-- DROPDOWN AND BEER OPTIONS -->
 	<section class='beer-options'>
-		<div class='dropdown-menus'>
-			<select id="beer-style">
-			  <option value="">OPTION ONE</option>
-			</select>
-			<select id="beer-strength">
-			  <option value="">OPTION TWO</option>
-			</select>
-			<select id="beer-type">
-			  <option value="">OPTION THREE</option>
-			</select>
-		</div>
-		<div class="beers-container">
-			<div id="beers-desktop">
-				<!-- Filled out using Handlebars template -->
+		<div class="wrapper">
+			<div class='dropdown-menus'>
+				<select id="beer-style">
+				  <option value="">OPTION ONE</option>
+				</select>
+				<select id="beer-strength">
+				  <option value="">OPTION TWO</option>
+				</select>
+				<select id="beer-type">
+				  <option value="">OPTION THREE</option>
+				</select>
 			</div>
-			<div id="beers-mobile">
-				<!-- Filled out using Handlebars template -->
+			<div class="beers-container">
+				<div id="beers-desktop">
+					<!-- Filled out using Handlebars template -->
+				</div>
+				<div id="beers-mobile">
+					<!-- Filled out using Handlebars template -->
+				</div>
 			</div>
 		</div>
 	</section>
 	<!-- MAP -->
 	<section class='map'></section>
 	<footer>
+	<div class="wrapper">
 		<h2>Site made by:</h2>
 		<div class='site-devs'>
 			
@@ -90,7 +95,7 @@ https://www.linkedin.com/in/dustinruetz"><i class="fa fa-linkedin-square" aria-h
 
 		</div>
 		<div class='copyright'><h3>© Copyright</h3></div>
-
+	</div>
 	</footer>
 
 
@@ -100,7 +105,7 @@ https://www.linkedin.com/in/dustinruetz"><i class="fa fa-linkedin-square" aria-h
 	<!-- Handlebars desktopTemplate -->
 	<script id="desktopTemplate" type="x-handlebars-template">
 		<figure>
-			<figcaption class="beer-name">{{name}}</figcaption>
+			<figcaption class="beer-name">{{name}}{{style}}{{price}}{{alcohol_content}}{{volume}}{{tertiary_category}}</figcaption>
 		</figure>
 	</script>
 
