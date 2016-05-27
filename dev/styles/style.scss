@@ -123,9 +123,12 @@ header {
 	flex-wrap:wrap;
 
 	figure {
-		width:calc(33.3% - 20px);
-		margin:10px 10px;
-		padding-bottom:calc(33.3% - 20px);
+		background-position: center;
+		background-size: cover;
+		// height: 300px;
+		padding-bottom: calc(33.3% - 20px);
+		margin: 10px 10px;
+		width: calc(33.3% - 20px);
 	}
 }
 

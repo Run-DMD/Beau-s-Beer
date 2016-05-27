@@ -321,9 +321,11 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   #beers-desktop figure {
-    width: calc(33.3% - 20px);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: calc(33.3% - 20px);
     margin: 10px 10px;
-    padding-bottom: calc(33.3% - 20px); }
+    width: calc(33.3% - 20px); }
 
 #beers-mobile details {
   border: 1px solid black;
