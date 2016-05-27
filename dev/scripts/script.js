@@ -9,10 +9,12 @@ beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2Z
 
 beausBeers.beerArray = [];
 
+var testVar = "Beau's Beer"
+
 const beerDescription = [
 	{
 		name: "Best of Beau's 2015",
-		description: "The “Best of Beau’s” Mix is a holiday mix pack featuring an eclectic mix of our most sought after one-off creations. All four beers were chosen through popular vote, by those who know best – our fans!",
+		description: "The 'Best of Beau's' Mix is a holiday mix pack featuring an eclectic mix of our most sought after one-off creations. All four beers were chosen through popular vote, by those who know best – our fans!",
 		image: "../images/best-of-beaus-2015-web.jpg"
 	},
 	{
