@@ -1,11 +1,14 @@
 @import "setup";
 
+@import "typography";
+
 // Generic Styles
 
 .wrapper {
-	max-width: 1280px;
+	max-width: 1100px;
+	width:90%;
 	padding: 0;
-	margin: 0;
+	margin:0 auto;
 }
 
 html {
@@ -31,37 +34,41 @@ p {
 header {
 	background: #f4debd;
 	width: 100%;
-	display: flex;
-	padding: 0 5% 0 0;
-	
-	.left-info {
+
+	.wrapper{
 		display: flex;
-		width: 45%;
+		padding: 0 5% 0 0;
+		
+		
+		.left-info {
+			display: flex;
+			width: 45%;
 
-		.content {
-			margin: auto;
+			.content {
+				margin: auto;
+			}
 		}
-	}
 
 
-	.right-image {
-		width: 45%;	
+		.right-image {
+			width: 45%;	
 
-		.main-image img{
-			width: 65%;
-			display: block;
-			float: right;
+			.main-image img{
+				width: 65%;
+				display: block;
+				float: right;
+			}
 		}
-	}
 
-	.center-arrow {
-		display: flex;
-		width: 10%;
-		justify-content: center;
-		align-self: flex-end;
-		margin-bottom: 3%;
-		font-size: 5rem;
-		color: #c4a077;
+		.center-arrow {
+			display: flex;
+			width: 10%;
+			justify-content: center;
+			align-self: flex-end;
+			margin-bottom: 3%;
+			font-size: 5rem;
+			color: #c4a077;
+		}
 	}
 }
 
@@ -74,8 +81,17 @@ header {
 		width: 100%;
 		justify-content: space-around;
 	}
-
 }
 
+#beers-desktop{
+	display:flex;
+	flex-wrap:wrap;
+
+	figure{
+		width:calc(33.3% - 20px);
+		margin:10px 10px;
+		padding-bottom:calc(33.3% - 20px);
+	}
+}
 
 

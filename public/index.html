@@ -9,6 +9,7 @@
 </head>
 	<!-- HEADER -->
 <header>
+	<div class="wrapper">
 		<div class='left-info'>
 			<div class='content'>
 				<figure class='logo'>
@@ -25,41 +26,45 @@
 			<figure class='main-image'>
 				<img src="images/bottle.png" alt="Beaus beer bottle on side of page">
 			</figure>
-		</div>		
+		</div>
+	</div>
 </header>
 <body>
 	<!-- DROPDOWN AND BEER OPTIONS -->
 	<section class='beer-options'>
-		<div class='dropdown-menus'>
-			<select id="beer-style">
-			  <option value="">OPTION ONE</option>
-			</select>
-			<select id="beer-strength">
-			  <option value="">OPTION TWO</option>
-			</select>
-			<select id="beer-type">
-			  <option value="">OPTION THREE</option>
-			</select>
-		</div>
-		<div class="beers-container">
-			<div id="beers-desktop">
-				<!-- Filled out using Handlebars template -->
+		<div class="wrapper">
+			<div class='dropdown-menus'>
+				<select id="beer-style">
+				  <option value="">OPTION ONE</option>
+				</select>
+				<select id="beer-strength">
+				  <option value="">OPTION TWO</option>
+				</select>
+				<select id="beer-type">
+				  <option value="">OPTION THREE</option>
+				</select>
 			</div>
-			<div id="beers-mobile">
-				<!-- Filled out using Handlebars template -->
+			<div class="beers-container">
+				<div id="beers-desktop">
+					<!-- Filled out using Handlebars template -->
+				</div>
+				<div id="beers-mobile">
+					<!-- Filled out using Handlebars template -->
+				</div>
 			</div>
 		</div>
 	</section>
 	<!-- MAP -->
 	<section class='map'></section>
 	<footer>
-		<p>Site made by:</p>
-		<div class='site-devs'></div>
-			<div class='First-dev'></div>
-			<div class='Second-dev'></div>
-			<div class='Third-dev'></div>
+		<div class="wrapper">
+			<p>Site made by:</p>
+			<div class='site-devs'></div>
+				<div class='First-dev'></div>
+				<div class='Second-dev'></div>
+				<div class='Third-dev'></div>
+			<p>Copyright</p>
 		</div>
-		<p>Copyright</p>
 	</footer>
 
 

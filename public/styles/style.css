@@ -176,9 +176,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1100px;
+  width: 90%;
   padding: 0;
-  margin: 0; }
+  margin: 0 auto; }
 
 html {
   font-size: 62.5%; }
@@ -198,33 +199,34 @@ p {
 
 header {
   background: #f4debd;
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 5% 0 0; }
-  header .left-info {
+  width: 100%; }
+  header .wrapper {
     display: -ms-flexbox;
     display: flex;
-    width: 45%; }
-    header .left-info .content {
-      margin: auto; }
-  header .right-image {
-    width: 45%; }
-    header .right-image .main-image img {
-      width: 65%;
-      display: block;
-      float: right; }
-  header .center-arrow {
-    display: -ms-flexbox;
-    display: flex;
-    width: 10%;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-bottom: 3%;
-    font-size: 5rem;
-    color: #c4a077; }
+    padding: 0 5% 0 0; }
+    header .wrapper .left-info {
+      display: -ms-flexbox;
+      display: flex;
+      width: 45%; }
+      header .wrapper .left-info .content {
+        margin: auto; }
+    header .wrapper .right-image {
+      width: 45%; }
+      header .wrapper .right-image .main-image img {
+        width: 65%;
+        display: block;
+        float: right; }
+    header .wrapper .center-arrow {
+      display: -ms-flexbox;
+      display: flex;
+      width: 10%;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      margin-bottom: 3%;
+      font-size: 5rem;
+      color: #c4a077; }
 
 .beer-options {
   background: #a4baba; }
@@ -234,3 +236,13 @@ header {
     width: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
+
+#beers-desktop {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #beers-desktop figure {
+    width: calc(33.3% - 20px);
+    margin: 10px 10px;
+    padding-bottom: calc(33.3% - 20px); }
