@@ -10,6 +10,7 @@ beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2Z
 // console.log(beausBeers.apiKey);
 
 //creating our beer Array in our main object. Beers returned from the ajax call will be stored here
+
 beausBeers.beerArray = [];
 
 //Beer properties (from object returned from ajax call)
@@ -85,8 +86,8 @@ const beerDetails = [
 	},
 		{
 		name: "Kremlock Keg",
-		description: "kremlock-keg.jpg",
-		image: "../images/Rye malt and rare Polish hops lends peppery notes and an herbal earthiness to this roggenbier, which blend harmoniously with hints of clove and banana contributed by the weizen yeast. Kremlock is part of the Pro-Am Series… cheers to Michel Lecavalier, who won the 2014 Beau’s Oktoberfest homebrew contest, earning the prize of brewing his beer in the Beau’s brewhouse for 2015!"
+		description: "Rye malt and rare Polish hops lends peppery notes and an herbal earthiness to this roggenbier, which blend harmoniously with hints of clove and banana contributed by the weizen yeast. Kremlock is part of the Pro-Am Series… cheers to Michel Lecavalier, who won the 2014 Beau’s Oktoberfest homebrew contest, earning the prize of brewing his beer in the Beau’s brewhouse for 2015!",
+		image: "../images/kremlock-keg.jpg"
 	},
 		{
 		name: "Beau's Le Coeur Noir Black IPA",
