@@ -21,13 +21,13 @@ h1{
 }
 
 h2{
-	@include font-size(22);
+	@include font-size(18);
 	font-family:$fontserif;
 }
 
 h3{
-	@include font-size(18);
-	font-family:$fontserif;
+	@include font-size(10);
+	font-family:$fontsans;
 }
 
 h4{
@@ -47,6 +47,11 @@ h6{
 
 li{
 	@include font-size(12)
+	font-family:$fontsans;
+}
+
+figcaption{
+	@include font-size(8)
 	font-family:$fontsans;
 }
 
