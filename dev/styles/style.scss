@@ -26,14 +26,50 @@ h1 {
 	letter-spacing: .3rem;
 }
 
+h2 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 1.5rem;
+	letter-spacing: .3rem;
+	color: #c4a077;
+}
+
+h3 {
+	letter-spacing: .3rem;
+}
+
 p {
 	font-size: 1.5rem;
 	letter-spacing: .2rem;
 }
 
+a {
+    color: #512b1b;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#a4baba; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+// HEADER
+
 header {
 	background: #f4debd;
 	width: 100%;
+<<<<<<< HEAD
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+	padding: 0 5% 0 0;
+	
+	.left-info {
+		display: flex;
+		width: 45%;
+=======
+>>>>>>> 9ee9e795fb12012b02837bb71c503b4b5723bb76
 
 	.wrapper{
 		display: flex;
@@ -50,8 +86,15 @@ header {
 		}
 
 
+<<<<<<< HEAD
+	.right-image {
+		display: flex;
+		align-self: flex-end;
+		width: 45%;	
+=======
 		.right-image {
 			width: 45%;	
+>>>>>>> 9ee9e795fb12012b02837bb71c503b4b5723bb76
 
 			.main-image img{
 				width: 65%;
@@ -72,15 +115,89 @@ header {
 	}
 }
 
+// DROPDOWNS
 
 .beer-options {
 	background: #a4baba;
+	border-top: 1px solid #c4a077;
 
 	.dropdown-menus {
 		display: flex;
 		width: 100%;
-		justify-content: space-around;
+		padding: 3%;
+		justify-content: space-around;	
+
+		#beer-style,
+		#beer-strength,
+		#beer-type {
+			background: #f7f0e6;
+			width: 275px;
+			padding: 5px;
+			font-size: 1.5rem;
+			line-height: 1;
+			border: 0;
+			outline: #a4baba;
+			height: 34px;
+		}
 	}
+}
+
+// FOOTER
+
+footer {
+	width: 100%;
+	padding: 1%;
+	background: #f4debd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border-top: 1px solid #c4a077;
+	
+
+		.site-devs {
+			display: flex;
+			width: 100%;
+			padding: 1%;	
+		}
+
+		.social {
+			display: flex;
+			margin: auto;
+			flex-direction: row;
+
+			p {
+				padding: 25% 5% 5% 5%;
+				color: #512b1b;
+			}
+		}
+
+
+		.first-dev,
+		.second-dev,
+		.third-dev {
+			display: flex;
+			flex-direction: column;
+			width: 35%;
+			padding: 5%;
+			// border-right: 1px solid #a4baba;
+			}
+	}
+<<<<<<< HEAD
+
+
+
+		
+	.vertical-line {
+    	border-left: 1px solid #a4baba;
+
+		.copyright {
+			align-self: baseline; 
+			margin: auto;
+		}
+
+=======
+>>>>>>> 9ee9e795fb12012b02837bb71c503b4b5723bb76
 }
 
 #beers-desktop{
