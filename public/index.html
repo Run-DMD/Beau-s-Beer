@@ -23,13 +23,13 @@
 	<!-- DROPDOWN AND BEER OPTIONS -->
 	<section class='beer-options'>
 		<div class='dropdown-menus'>
-			<select id="">
+			<select id="beer-style">
 			  <option value="">OPTION ONE</option>
 			</select>
-			<select id="">
+			<select id="beer-strength">
 			  <option value="">OPTION TWO</option>
 			</select>
-			<select id="">
+			<select id="beer-type">
 			  <option value="">OPTION THREE</option>
 			</select>
 		</div>
@@ -63,7 +63,7 @@
 	<!-- Handlebars desktopTemplate -->
 	<script id="desktopTemplate" type="x-handlebars-template">
 		<figure>
-			<figcaption class="beer-name">{{name}}</figcaption>
+			<figcaption class="beer-name">{{name}}{{style}}{{price}}{{alcohol_content}}{{volume}}{{tertiary_category}}</figcaption>
 		</figure>
 	</script>
 
