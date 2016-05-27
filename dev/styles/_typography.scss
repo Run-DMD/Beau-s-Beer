@@ -20,13 +20,6 @@ h1{
 	letter-spacing:3px;
 }
 
-h1{
-	@include font-size(32);
-	font-family:$fontserif;
-	font-weight:bold;
-	letter-spacing:3px;
-}
-
 h2{
 	@include font-size(18);
 	font-family:$fontserif;

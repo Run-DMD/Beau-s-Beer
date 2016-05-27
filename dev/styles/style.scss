@@ -128,21 +128,55 @@ header {
 			height: 34px;			
 		}
 	}
+}
+// #beers-desktop
+#beers-desktop {
+	display:flex;
+	flex-wrap:wrap;
 
-	#beers-desktop {
-		display:flex;
-		flex-wrap:wrap;
+	figure {
+		background-position: center;
+		background-size: cover;
+		// height: 300px;
+		padding-bottom: calc(33.3% - 20px);
+		margin: 10px 10px;
+		width: calc(33.3% - 20px);
+	}
+}
 
-		figure {
-			width:calc(33.3% - 20px);
-			margin:10px 10px;
-		}
+#beers-desktop {
+	display:flex;
+	figure {
+		width:calc(33.3% - 20px);
+		margin:10px 10px;
+	}
 
-		figcaption {
-			font-size: .9rem;
-			line-height: 1.5rem;
-			text-align: center;
-		}
+	figcaption {
+		font-size: .9rem;
+		line-height: 1.5rem;
+		text-align: center;
+	}
+}
+// #beers-mobile
+#beers-mobile {
+	details {
+		border: 1px solid black;
+		margin-bottom: 10px;
+	}
+	details summary::-webkit-details-marker {
+		display: none;
+	}
+	summary div {
+		@include font-size(14);
+		display: flex;
+		align-items: center;
+	}
+	img {
+		max-height: 75px;
+		max-width: 75px;
+	}
+	figcaption {
+		margin-left: 10px;
 	}
 }
 
@@ -196,5 +230,3 @@ footer {
 		margin: auto;
 	}
 }
-
-
