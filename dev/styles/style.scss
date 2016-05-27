@@ -8,26 +8,60 @@
 	margin: 0;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
 	background: #C4A077;
 }
 
-header {
-	background: #512b1b;
-	width: 100vw;
-	height: 50px;
-	display: flex;
+h1 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 5rem;
+	color: #512b1b;
+	letter-spacing: .3rem;
+}
 
+p {
+	font-size: 1.5rem;
+	letter-spacing: .2rem;
+}
+
+header {
+	background: #f4debd;
+	width: 100%;
+	display: flex;
+	padding: 0 5% 0 0;
+	
 	.left-info {
-		width: 60%;
+		display: flex;
+		width: 45%;
+
+		.content {
+			margin: auto;
+		}
 	}
 
+
 	.right-image {
-		width: 30%;
+		width: 45%;	
+
+		.main-image img{
+			width: 65%;
+			display: block;
+			float: right;
+		}
 	}
 
 	.center-arrow {
+		display: flex;
 		width: 10%;
+		justify-content: center;
+		align-self: flex-end;
+		margin-bottom: 3%;
+		font-size: 5rem;
+		color: #c4a077;
 	}
 }
 
