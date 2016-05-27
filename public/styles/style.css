@@ -194,14 +194,14 @@ h1 {
   letter-spacing: 3px; }
 
 h2 {
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-family: "Abril Fatface", cursive; }
-
-h3 {
   font-size: 18px;
   font-size: 1.8rem;
   font-family: "Abril Fatface", cursive; }
+
+h3 {
+  font-size: 10px;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif; }
 
 h4 {
   font-size: 16px;
@@ -223,6 +223,11 @@ li {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif; }
 
+figcaption {
+  font-size: 8px;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif; }
+
 p {
   font-size: 12px;
   font-size: 1.2rem;
@@ -241,17 +246,22 @@ h1 {
   font-size: 24px;
   font-size: 2.4rem;
   color: #512b1b;
-  letter-spacing: .3rem; }
+  letter-spacing: .3rem;
+  text-transform: uppercase; }
 
 h2 {
-  letter-spacing: .3rem;
+  font-size: 1rem;
+  letter-spacing: .2rem;
   color: #c4a077; }
 
 h3 {
-  letter-spacing: .3rem; }
+  font-size: .3rem;
+  letter-spacing: .2rem; }
 
 p {
-  letter-spacing: .2rem; }
+  font-size: .9rem;
+  letter-spacing: .2rem;
+  line-height: 1.5rem; }
 
 a {
   color: #512b1b;
@@ -261,6 +271,10 @@ a:hover {
   color: #a4baba;
   text-decoration: none;
   cursor: pointer; }
+
+select {
+  font-size: 1rem;
+  letter-spacing: .2rem; }
 
 header {
   background: #f4debd;
@@ -297,7 +311,7 @@ header {
       -ms-flex-item-align: end;
           align-self: flex-end;
       margin-bottom: 3%;
-      font-size: 5rem;
+      font-size: 3rem;
       color: #c4a077; }
 
 .beer-options {
@@ -313,10 +327,10 @@ header {
     .beer-options .dropdown-menus #beer-style,
     .beer-options .dropdown-menus #beer-strength,
     .beer-options .dropdown-menus #beer-type {
-      background: #f7f0e6;
+      background: #d2dddd;
       width: 275px;
       padding: 5px;
-      font-size: 1.5rem;
+      font-size: .8rem;
       line-height: 1;
       border: 0;
       outline: #a4baba;
@@ -328,12 +342,15 @@ header {
         flex-wrap: wrap; }
     .beer-options #beers-desktop figure {
       width: calc(33.3% - 20px);
-      margin: 10px 10px;
-      padding-bottom: calc(33.3% - 20px); }
+      margin: 10px 10px; }
+    .beer-options #beers-desktop figcaption {
+      font-size: .9rem;
+      line-height: 1.5rem;
+      text-align: center; }
 
 footer {
   width: 100%;
-  padding: 1%;
+  padding: 2%;
   background: #f4debd;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +372,7 @@ footer {
     -ms-flex-direction: row;
         flex-direction: row; }
     footer .social p {
-      padding: 25% 5% 5% 5%;
+      padding: 10% 5% 5% 5%;
       color: #512b1b; }
   footer .first-dev,
   footer .second-dev,
