@@ -192,15 +192,35 @@ h1 {
   color: #512b1b;
   letter-spacing: .3rem; }
 
+h2 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.5rem;
+  letter-spacing: .3rem;
+  color: #c4a077; }
+
+h3 {
+  letter-spacing: .3rem; }
+
 p {
   font-size: 1.5rem;
   letter-spacing: .2rem; }
 
+a {
+  color: #512b1b;
+  text-decoration: none; }
+
+a:hover {
+  color: #a4baba;
+  text-decoration: none;
+  cursor: pointer; }
+
 header {
   background: #f4debd;
   width: 100%;
+  height: 100vh;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   padding: 0 5% 0 0; }
   header .left-info {
     display: -ms-flexbox;
@@ -209,6 +229,10 @@ header {
     header .left-info .content {
       margin: auto; }
   header .right-image {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     width: 45%; }
     header .right-image .main-image img {
       width: 65%;
@@ -227,10 +251,66 @@ header {
     color: #c4a077; }
 
 .beer-options {
-  background: #a4baba; }
+  background: #a4baba;
+  border-top: 1px solid #c4a077; }
   .beer-options .dropdown-menus {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    padding: 3%;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
+    .beer-options .dropdown-menus #beer-style,
+    .beer-options .dropdown-menus #beer-strength,
+    .beer-options .dropdown-menus #beer-type {
+      background: #f7f0e6;
+      width: 275px;
+      padding: 5px;
+      font-size: 1.5rem;
+      line-height: 1;
+      border: 0;
+      outline: #a4baba;
+      height: 34px; }
+
+footer {
+  width: 100%;
+  padding: 1%;
+  background: #f4debd;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+  border-top: 1px solid #c4a077; }
+  footer .site-devs {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 1%; }
+  footer .social {
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -ms-flex-direction: row;
+        flex-direction: row; }
+    footer .social p {
+      padding: 25% 5% 5% 5%;
+      color: #512b1b; }
+  footer .first-dev,
+  footer .second-dev,
+  footer .third-dev {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 35%;
+    padding: 5%; }
+
+.vertical-line {
+  border-left: 1px solid #a4baba; }
+  .vertical-line .copyright {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    margin: auto; }
