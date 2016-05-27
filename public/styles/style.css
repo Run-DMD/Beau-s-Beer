@@ -264,8 +264,7 @@ header {
   overflow: hidden; }
   header .wrapper {
     display: -ms-flexbox;
-    display: flex;
-    padding: 0 5% 0 0; }
+    display: flex; }
     header .wrapper .left-info {
       display: -ms-flexbox;
       display: flex;
