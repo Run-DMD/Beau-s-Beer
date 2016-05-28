@@ -5,6 +5,7 @@ const beausBeers = {
 
 };
 
+
 //LCBO API Key
 beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2ZjQUJlRElHVnM5YTBhWFBUNlQwWWhQR0RSSW9ydENF';
 // console.log(beausBeers.apiKey);
@@ -121,6 +122,8 @@ beausBeers.userChoices = [];
 beausBeers.init = function(){
 	beausBeers.getData();
 };
+
+
 
 //ajax call to the LCBO API
 beausBeers.getData = function(){
@@ -322,4 +325,5 @@ beausBeers.templates = function() {
 
 $(document).ready(function(){
 	beausBeers.init();
+	
 });

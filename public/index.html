@@ -19,8 +19,15 @@
 				<p>Beau's seasonal beer finder</p>
 			</div>
 		</div>
-		<div class='center-arrow'>
-			<i class="fa fa-chevron-down" aria-hidden="true"></i>
+		<div class='center-container'>
+			<div class="form-postcode">
+				<form>
+					<h4><label for="post-code">Enter your postal code!</label></h4>
+						<input type="text" maxlength='6' placeholder="M6G4X8">
+						<input type="submit" value="Submit">	
+				</form>
+			</div>
+			<!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
 		</div>
 		<div class='right-image'>
 			<figure class='main-image'>
@@ -33,29 +40,30 @@
 	<!-- DROPDOWN AND BEER OPTIONS -->
 	<section class='beer-options'>
 		<div class="wrapper">
+		<!-- <a name="anchor"></a> -->
 			<div class='dropdown-menus'>
 				<select id="beer-style">
-				  <option value="">OPTION ONE</option>
+					<option value="">OPTION ONE</option>
 				</select>
 				<select id="beer-strength">
-				  <option value="">OPTION TWO</option>
+					<option value="">OPTION TWO</option>
 				</select>
 				<select id="beer-type">
-				  <option value="">OPTION THREE</option>
+					<option value="">OPTION THREE</option>
 				</select>
 			</div>
 			<div class="beers-container">
 				<div id="beers-desktop">
-					<!-- Filled out using Handlebars template -->
+					<!-- Filled out using Handlebars #desktopTemplate (below) -->
 				</div>
 				<div id="beers-mobile">
-					<!-- Filled out using Handlebars template -->
+					<!-- Filled out using Handlebars #mobileTemplate (below) -->
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- MAP -->
-	<section class='map'></section>
+	<!-- <section class='map'></section> -->
 	<footer>
 	<div class="wrapper">
 		<h2>Site made by:</h2>
@@ -76,7 +84,7 @@
 				<div class='social'>
 				<p><a href="https://twitter.com/ledukeness" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></p>
 				<p><a href="https://ca.linkedin.com/in/maxime-leduc-68846b63" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></p>
-				<p><a href="https://github.com/Run-DMD" target="blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></p>
+					<p><a href="https://github.com/Run-DMD" target="blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></p>
 				</div>
 			</div>
 			<div class="vertical-line"></div>
@@ -101,8 +109,15 @@
 
 	<!-- Handlebars desktopTemplate -->
 	<script id="desktopTemplate" type="x-handlebars-template">
-		<figure class="beer-item2"2 style="background-image: url({{image}})">
-			<figcaption class="beer-name">{{name}}{{style}}{{price}}{{alcohol_content}}{{volume}}{{tertiary_category}}</figcaption>
+		<figure class="beer-item" style="background-image: url({{image}})">
+			<div class="overlay">
+				<div class="overlay-text">
+					<figcaption class="beer-name">{{name}}</figcaption>
+					<button>
+						<img src="icons/magnifier.svg" alt="Magnifying glass to show more details">
+					</button>
+				</div>
+			</div>
 		</figure>
 	</script>
 
@@ -115,7 +130,13 @@
 					<figcaption class="beer-name">{{name}}</figcaption>
 				</div>
 			</summary>
-			<p>Test paragraph.</p>
+			<div class="alcohol-style-price">
+				<p>{{alcohol_content}}</p>
+				<p>{{style}}</p>
+				<p>{{price}}</p>
+			</div>
+			<p>Stocked at: </p>
+			<p class="beer-description">{{description}}</p>
 		</details>
 	</script>
 	<script src="scripts/script.js"></script>

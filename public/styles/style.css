@@ -199,7 +199,7 @@ h3 {
 h4 {
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: "Abril Fatface", cursive; }
+  font-family: "Open Sans", sans-serif; }
 
 h5 {
   font-size: 14px;
@@ -233,13 +233,13 @@ p {
   margin: 0 auto; }
 
 body {
-  background: #C4A077; }
+  background: #c4a077; }
 
 h1 {
   font-size: 24px;
   font-size: 2.4rem;
-  color: #512b1b;
-  letter-spacing: .3rem;
+  color: #522c1b;
+  letter-spacing: 0.3rem;
   text-transform: uppercase; }
 
 h2 {
@@ -251,26 +251,31 @@ h3 {
   font-size: .3rem;
   letter-spacing: .2rem; }
 
+h4 {
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  text-align: center; }
+
 p {
   font-size: .9rem;
   letter-spacing: .2rem;
   line-height: 1.5rem; }
 
 a {
-  color: #512b1b;
+  color: #522c1b;
   text-decoration: none; }
 
 a:hover {
-  color: #a4baba;
+  color: #a5babb;
   text-decoration: none;
   cursor: pointer; }
 
 select {
   font-size: 1rem;
-  letter-spacing: .2rem; }
+  letter-spacing: 0.2rem; }
 
 header {
-  background: #f4debd;
+  background: #f5dfbe;
   width: 100%;
   height: 100vh;
   display: -ms-flexbox;
@@ -295,20 +300,40 @@ header {
         width: 65%;
         display: block;
         float: right; }
-    header .wrapper .center-arrow {
+    header .wrapper .center-container {
       display: -ms-flexbox;
       display: flex;
       width: 10%;
+      font-size: .8rem;
       -ms-flex-pack: center;
           justify-content: center;
       -ms-flex-item-align: end;
           align-self: flex-end;
       margin-bottom: 3%;
-      font-size: 3rem;
       color: #c4a077; }
+      header .wrapper .center-container input[type="text"] {
+        margin-top: 3%;
+        padding: 5%;
+        width: 200px;
+        background-color: #f2e2cb;
+        outline: #f4debd;
+        border: 1px solid #c4a077; }
+      header .wrapper .center-container ::-webkit-input-placeholder {
+        color: #c4a077; }
+      header .wrapper .center-container ::-moz-placeholder {
+        color: #c4a077;
+        opacity: 1; }
+      header .wrapper .center-container input[type="submit"] {
+        font-size: .8rem;
+        background-color: #512b1b;
+        color: #f4debd;
+        width: 200px;
+        padding: 5%;
+        margin-top: 4%;
+        border: none; }
 
 .beer-options {
-  background: #a4baba;
+  background: #a5babb;
   border-top: 1px solid #c4a077; }
   .beer-options .dropdown-menus {
     display: -ms-flexbox;
@@ -320,13 +345,13 @@ header {
     .beer-options .dropdown-menus #beer-style,
     .beer-options .dropdown-menus #beer-strength,
     .beer-options .dropdown-menus #beer-type {
-      background: #d2dddd;
+      background: #a5babb;
       width: 275px;
       padding: 5px;
       font-size: .8rem;
       line-height: 1;
       border: 0;
-      outline: #a4baba;
+      outline: #a5babb;
       height: 34px; }
 
 #beers-desktop {
@@ -339,29 +364,55 @@ header {
     background-size: cover;
     padding-bottom: calc(33.3% - 20px);
     margin: 10px 10px;
+    position: relative;
     width: calc(33.3% - 20px); }
-
-#beers-desktop {
-  display: -ms-flexbox;
-  display: flex; }
-  #beers-desktop figure {
-    width: calc(33.3% - 20px);
-    margin: 10px 10px; }
+    #beers-desktop figure:hover .overlay {
+      opacity: 1.0; }
+  #beers-desktop .overlay {
+    background-color: rgba(196, 160, 119, 0.75);
+    height: 100%;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    width: 100%; }
+  #beers-desktop .overlay-text {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
   #beers-desktop figcaption {
-    font-size: .9rem;
+    color: #522c1b;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
     line-height: 1.5rem;
     text-align: center; }
+  #beers-desktop button {
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 35px; }
+  #beers-desktop button img {
+    height: 35px;
+    width: 35px; }
 
 #beers-mobile details {
-  border: 1px solid black;
-  margin-bottom: 10px; }
+  border-left: 2px solid #522c1b;
+  margin-bottom: 20px;
+  padding: 2px 5px 5px 5px;
+  display: -ms-flexbox;
+  display: flex; }
 
 #beers-mobile details summary::-webkit-details-marker {
   display: none; }
 
 #beers-mobile summary div {
-  font-size: 14px;
-  font-size: 1.4rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -374,10 +425,35 @@ header {
 #beers-mobile figcaption {
   margin-left: 10px; }
 
+#beers-mobile .beer-name {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+#beers-mobile .alcohol-style-price {
+  margin-top: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  #beers-mobile .alcohol-style-price p:nth-of-type(2) {
+    background-color: #f5dfbe;
+    border-radius: 5px;
+    color: #522c1b;
+    font-size: 8px;
+    font-size: 0.8rem;
+    padding: 5px; }
+
+#beers-mobile .beer-description {
+  font-style: italic;
+  letter-spacing: 0.5px; }
+
 footer {
   width: 100%;
   padding: 2%;
-  background: #f4debd;
+  background: #f5dfbe;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -399,7 +475,7 @@ footer {
         flex-direction: row; }
     footer .social p {
       padding: 10% 5% 5% 5%;
-      color: #512b1b; }
+      color: #522c1b; }
   footer .first-dev,
   footer .second-dev,
   footer .third-dev {
@@ -410,7 +486,7 @@ footer {
     width: 35%;
     padding: 5%; }
   footer .vertical-line {
-    border-left: 1px solid #a4baba; }
+    border-left: 1px solid #a5babb; }
   footer .copyright {
     -ms-flex-item-align: baseline;
         align-self: baseline;
