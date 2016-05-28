@@ -2,6 +2,13 @@
 
 @import "typography";
 
+// Color palette
+$brown-light: #f5dfbe;
+$brown-medium: #c4a077;
+$brown-medium-rgba: rgba(196, 160, 119, 0.75);
+$brown-dark: #522c1b;
+$blue: #a5babb;
+
 // Generic Styles
 
 .wrapper {
@@ -12,20 +19,20 @@
 }
 
 body {
-	background: #C4A077;
+	background: $brown-medium;
 }
 
 h1 {
 	@include font-size(24);
-	color: #512b1b;
-	letter-spacing: .3rem;
+	color: $brown-dark;
+	letter-spacing: 0.3rem;
 	text-transform: uppercase;
 }
 
 h2 {
 	font-size: 1rem;
 	letter-spacing: .2rem;
-	color: #c4a077;
+	color: $brown-medium;
 }
 
 h3 {
@@ -40,20 +47,20 @@ p {
 }
 
 a {
-    color: #512b1b;
+    color: $brown-dark;
     text-decoration: none;
 }
 
 a:hover 
 {
-     color:#a4baba; 
-     text-decoration:none; 
-     cursor:pointer;  
+     color: $blue; 
+     text-decoration: none; 
+     cursor: pointer;
 }
 
 select {
 	font-size: 1rem; 
-	letter-spacing: .2rem;
+	letter-spacing: 0.2rem;
 }
 
 
@@ -61,7 +68,7 @@ select {
 // HEADER
 
 header {
-	background: #f4debd;
+	background: $brown-light;
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -98,7 +105,7 @@ header {
 			align-self: flex-end;
 			margin-bottom: 3%;
 			font-size: 3rem;
-			color: #c4a077;
+			color: $brown-medium;
 		}
 	}
 }
@@ -106,8 +113,8 @@ header {
 // DROPDOWNS
 
 .beer-options {
-	background: #a4baba;
-	border-top: 1px solid #c4a077;
+	background: $blue;
+	border-top: 1px solid $brown-medium;
 
 	.dropdown-menus {
 		display: flex;
@@ -118,56 +125,79 @@ header {
 		#beer-style,
 		#beer-strength,
 		#beer-type {
-			background: #d2dddd;
+			background: $blue;
 			width: 275px;
 			padding: 5px;
 			font-size: .8rem;
 			line-height: 1;
 			border: 0;
-			outline: #a4baba;
+			outline: $blue;
 			height: 34px;			
 		}
 	}
 }
 // #beers-desktop
 #beers-desktop {
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 
 	figure {
 		background-position: center;
 		background-size: cover;
-		// height: 300px;
 		padding-bottom: calc(33.3% - 20px);
 		margin: 10px 10px;
+		position: relative;
 		width: calc(33.3% - 20px);
+		&:hover .overlay {
+			opacity: 1.0;
+		}
 	}
-}
-
-#beers-desktop {
-	display:flex;
-	figure {
-		width:calc(33.3% - 20px);
-		margin:10px 10px;
+	.overlay {
+		background-color: $brown-medium-rgba;
+		height: 100%;
+		opacity: 0;
+		padding: 10px;
+		position: absolute;
+		transition: all 0.3s ease-in;
+		width: 100%;
 	}
-
+	.overlay-text {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
+	}
 	figcaption {
-		font-size: .9rem;
+		color: $brown-dark;
+		@include font-size(14);
+		font-weight: bold;
 		line-height: 1.5rem;
 		text-align: center;
+	}
+	button {
+		background-color: transparent;
+		border: none;
+		height: 35px;
+		width: 35px;
+	}
+	button img {
+		height: 35px;
+		width: 35px;
 	}
 }
 // #beers-mobile
 #beers-mobile {
 	details {
-		border: 1px solid black;
-		margin-bottom: 10px;
+		border-left: 2px solid $brown-dark;
+		margin-bottom: 20px;
+		padding: 2px 5px 5px 5px;
+		display: flex;
 	}
 	details summary::-webkit-details-marker {
 		display: none;
 	}
 	summary div {
-		@include font-size(14);
 		display: flex;
 		align-items: center;
 	}
@@ -178,21 +208,42 @@ header {
 	figcaption {
 		margin-left: 10px;
 	}
-}
+	.beer-name {
+		@include font-size(12);
+		font-weight: bold;
+	}
+	.alcohol-style-price {
+		margin-top: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		p:nth-of-type(2) {
+			background-color: $brown-light;
+			border-radius: 5px;
+			color: $brown-dark;
+			@include font-size(8);
+			padding: 5px;
+		}
+	}
 
+	.beer-description {
+		font-style: italic;
+		letter-spacing: 0.5px;
+	}
+}
 // FOOTER
 
 footer {
 	width: 100%;
 	padding: 2%;
-	background: #f4debd;
+	background: $brown-light;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	border-top: 1px solid #c4a077;
+	border-top: 1px solid $brown-medium;
 	
-
 	.site-devs {
 		display: flex;
 		width: 100%;
@@ -206,10 +257,9 @@ footer {
 
 		p {
 			padding: 10% 5% 5% 5%;
-			color: #512b1b;
+			color: $brown-dark;
 		}
 	}
-
 
 	.first-dev,
 	.second-dev,
@@ -218,11 +268,11 @@ footer {
 		flex-direction: column;
 		width: 35%;
 		padding: 5%;
-		// border-right: 1px solid #a4baba;
+		// border-right: 1px solid $blue;
 		}
 
 	.vertical-line {
-		border-left: 1px solid #a4baba;
+		border-left: 1px solid $blue;
 	}
 
 	.copyright {
