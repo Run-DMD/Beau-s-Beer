@@ -168,6 +168,10 @@ header {
 		flex-direction: column;
 		justify-content: space-around;
 	}
+	.beer-name {
+		@include font-size(20);
+		line-height: 1.0;
+	}
 	figcaption {
 		color: $brown-dark;
 		@include font-size(14);
@@ -178,14 +182,46 @@ header {
 	button {
 		background-color: transparent;
 		border: none;
-		height: 35px;
-		width: 35px;
+		height: 50px;
+		width: 50px;
 	}
 	button img {
-		height: 35px;
-		width: 35px;
+		height: 50px;
+		width: 50px;
 	}
 }
+//.detailed-view
+.detailed-view {
+	margin: 0 auto;
+	max-width: 750px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	
+	button {
+		background-color: transparent;
+		border: none;
+		width: 35px;
+	}
+
+	.content {
+		display: flex;
+
+		figure {
+			margin-right: 25px;
+			width: 35%;
+
+			img {
+				max-width: 100%;
+			}
+		}
+		div {
+			width: 65%;
+		}
+	}
+}
+
 // #beers-mobile
 #beers-mobile {
 	details {
