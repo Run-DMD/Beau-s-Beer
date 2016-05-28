@@ -103,8 +103,12 @@
 	<script id="desktopTemplate" type="x-handlebars-template">
 		<figure class="beer-item" style="background-image: url({{image}})">
 			<div class="overlay">
-				<figcaption class="beer-name">{{name}}</figcaption>
-				<button>Details</button>
+				<div class="overlay-text">
+					<figcaption class="beer-name">{{name}}</figcaption>
+					<button>
+						<img src="icons/magnifier.svg" alt="Magnifying glass to show more details">
+					</button>
+				</div>
 			</div>
 		</figure>
 	</script>
@@ -123,6 +127,7 @@
 				<p>{{style}}</p>
 				<p>{{price}}</p>
 			</div>
+			<p>Stocked at: </p>
 			<p class="beer-description">{{description}}</p>
 		</details>
 	</script>

@@ -5,6 +5,7 @@
 // Color palette
 $brown-light: #f5dfbe;
 $brown-medium: #c4a077;
+$brown-medium-rgba: rgba(196, 160, 119, 0.75);
 $brown-dark: #522c1b;
 $blue: #a5babb;
 
@@ -145,12 +146,44 @@ header {
 		background-size: cover;
 		padding-bottom: calc(33.3% - 20px);
 		margin: 10px 10px;
+		position: relative;
 		width: calc(33.3% - 20px);
+		&:hover .overlay {
+			opacity: 1.0;
+		}
+	}
+	.overlay {
+		background-color: $brown-medium-rgba;
+		height: 100%;
+		opacity: 0;
+		padding: 10px;
+		position: absolute;
+		transition: all 0.3s ease-in;
+		width: 100%;
+	}
+	.overlay-text {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	figcaption {
-		font-size: 0.9rem;
+		color: $brown-dark;
+		@include font-size(14);
+		font-weight: bold;
 		line-height: 1.5rem;
 		text-align: center;
+	}
+	button {
+		background-color: transparent;
+		border: none;
+		height: 35px;
+		width: 35px;
+	}
+	button img {
+		height: 35px;
+		width: 35px;
 	}
 }
 // #beers-mobile

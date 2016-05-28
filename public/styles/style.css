@@ -339,11 +339,43 @@ header {
     background-size: cover;
     padding-bottom: calc(33.3% - 20px);
     margin: 10px 10px;
+    position: relative;
     width: calc(33.3% - 20px); }
+    #beers-desktop figure:hover .overlay {
+      opacity: 1.0; }
+  #beers-desktop .overlay {
+    background-color: rgba(196, 160, 119, 0.75);
+    height: 100%;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    width: 100%; }
+  #beers-desktop .overlay-text {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
   #beers-desktop figcaption {
-    font-size: 0.9rem;
+    color: #522c1b;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
     line-height: 1.5rem;
     text-align: center; }
+  #beers-desktop button {
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 35px; }
+  #beers-desktop button img {
+    height: 35px;
+    width: 35px; }
 
 #beers-mobile details {
   border-left: 2px solid #522c1b;
