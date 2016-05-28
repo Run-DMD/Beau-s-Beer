@@ -16,23 +16,32 @@ body{
 h1{
 	@include font-size(32);
 	font-family:$fontserif;
-	font-weight:bold;
-	letter-spacing:3px;
+	color: $brown-dark;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
 }
 
 h2{
 	@include font-size(18);
 	font-family:$fontserif;
+	font-size: 1rem;
+	letter-spacing: .2rem;
+	color: $brown-medium;
 }
 
 h3{
 	@include font-size(10);
 	font-family:$fontsans;
+	font-size: .3rem;
+	letter-spacing: .2rem;
 }
 
 h4{
 	@include font-size(16);
 	font-family:$fontsans;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	text-align: center;
 }
 
 h5{
@@ -58,4 +67,7 @@ figcaption{
 p{
 	@include font-size(12)
 	font-family:$fontsans;
+	font-size: .9rem; 
+	letter-spacing: .2rem;
+	line-height: 1.5rem;
 }
