@@ -199,7 +199,7 @@ h3 {
 h4 {
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: "Abril Fatface", cursive; }
+  font-family: "Open Sans", sans-serif; }
 
 h5 {
   font-size: 14px;
@@ -251,6 +251,11 @@ h3 {
   font-size: .3rem;
   letter-spacing: .2rem; }
 
+h4 {
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  text-align: center; }
+
 p {
   font-size: .9rem;
   letter-spacing: .2rem;
@@ -295,17 +300,37 @@ header {
         width: 65%;
         display: block;
         float: right; }
-    header .wrapper .center-arrow {
+    header .wrapper .center-container {
       display: -ms-flexbox;
       display: flex;
       width: 10%;
+      font-size: .8rem;
       -ms-flex-pack: center;
           justify-content: center;
       -ms-flex-item-align: end;
           align-self: flex-end;
       margin-bottom: 3%;
-      font-size: 3rem;
       color: #c4a077; }
+      header .wrapper .center-container input[type="text"] {
+        margin-top: 3%;
+        padding: 5%;
+        width: 200px;
+        background-color: #f2e2cb;
+        outline: #f4debd;
+        border: 1px solid #c4a077; }
+      header .wrapper .center-container ::-webkit-input-placeholder {
+        color: #c4a077; }
+      header .wrapper .center-container ::-moz-placeholder {
+        color: #c4a077;
+        opacity: 1; }
+      header .wrapper .center-container input[type="submit"] {
+        font-size: .8rem;
+        background-color: #512b1b;
+        color: #f4debd;
+        width: 200px;
+        padding: 5%;
+        margin-top: 4%;
+        border: none; }
 
 .beer-options {
   background: #a5babb;
