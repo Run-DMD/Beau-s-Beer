@@ -409,6 +409,9 @@ header {
   display: -ms-flexbox;
   display: flex; }
 
+#beers-mobile details:last-child {
+  margin-bottom: 0; }
+
 #beers-mobile details summary::-webkit-details-marker {
   display: none; }
 
