@@ -15,6 +15,9 @@ beausBeers.apiKey = 'MDpiMzJiZTJiYy0yMzU4LTExZTYtYjc2YS1lYjM1ZTNhY2NmN2U6Rk5DQ2Z
 beausBeers.beerArray = [];
 
 //Beer properties (from object returned from ajax call)
+
+beausBeers.userChoices = [];
+
 beausBeers.beerStyle = [];
 
 beausBeers.uniqueBeerStyle = [];
@@ -32,6 +35,8 @@ beausBeers.uniqueBeerType = [];
 beausBeers.userResults = [];
 
 beausBeers.storeLocations = [];
+
+beausBeers.userPostalCode = '';
 
 const beerDetails = [
 	{
@@ -116,14 +121,47 @@ const beerDetails = [
 	},
 ];
 
-beausBeers.userChoices = [];
-
 //init function
 beausBeers.init = function(){
-	beausBeers.getData();
+	// beausBeers.getData();
+	$('form').on('submit',function(e){
+		e.preventDefault();
+		beausBeers.beerArray = [];
+		beausBeers.beerStyle = [];
+		beausBeers.uniqueBeerStyle = [];
+		beausBeers.beerType = [];
+		beausBeers.uniqueBeerType = [];
+		beausBeers.userResults = [];
+		beausBeers.storeLocations = [];
+		beausBeers.userChoices = [];
+		$('#beers-desktop').empty();
+		$('#beers-mobile').empty();
+
+		//store the input from the user into a variable
+		var postalCode = $("input[name=postalCode]").val();
+		//postal code in uppercase for the query
+		var postalCodeUser = postalCode.toUpperCase();
+		console.log(postalCodeUser);
+		$('.form-postcode form').css('display', 'none');
+		$('.form-postcode').append("<img src='images/gears.gif' alt='Loading...'>");
+		beausBeers.checkPostalCode(postalCodeUser);
+	});
 };
 
-
+beausBeers.checkPostalCode = function(postalCodeUser){
+		var re = /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i;
+	    var confirmationPostal = re.exec(postalCodeUser);
+	    if (confirmationPostal !== null){
+	        postalCodeUser = postalCodeUser.replace(/\s+/g,'');
+	        beausBeers.getData();
+	        beausBeers.userPostalCode = postalCodeUser
+	    }
+	    else {
+	    	alert('Not a valid postal code');
+	    	$('.formWrapper form').css('display', 'flex');
+	    	$('.formWrapper img').css('display', 'none');
+	    }
+	}
 
 //ajax call to the LCBO API
 beausBeers.getData = function(){
@@ -139,7 +177,7 @@ beausBeers.getData = function(){
 		}
 	})
 	.then(function(lcboObjects){
-		// console.log(lcboObjects);
+		console.log(lcboObjects);
 		let beerResult = lcboObjects.result;
 		beausBeers.dataArray(beerResult);
 	});
@@ -202,7 +240,8 @@ beausBeers.locations = function(){
 			headers: { 'Authorization': ' Token ' + beausBeers.apiKey},
 			data: {
 				id:beausBeers.beerArray[x].product_id,
-				geo:'m6g1j6'
+				// geo:'m6g1j6'
+				geo:beausBeers.userPostalCode
 			},
 			async:false,
 		})
@@ -219,7 +258,7 @@ beausBeers.locations = function(){
 	}
 		console.log(beausBeers.beerArray)
 
-	// beausBeers.templates();
+	beausBeers.templates();
 }
 
 
@@ -266,6 +305,17 @@ beausBeers.templates = function() {
 		var filledMT = compiledMT(beer);
 		$("#beers-mobile").append(filledMT);
 	});
+
+	beausBeers.displayAll();
+};
+
+beausBeers.displayAll = function(){
+	$('.beer-options').css('display', 'block')
+	$('.form-postcode form').css('display', 'block');
+	$('.form-postcode img').css('display', 'none');
+	$('html, body').animate({
+		scrollTop: $('#beer-options').offset().top
+	}, 1000);
 };
 
 //following functions sorts beers based on user input
@@ -325,5 +375,4 @@ beausBeers.templates = function() {
 
 $(document).ready(function(){
 	beausBeers.init();
-	
 });
