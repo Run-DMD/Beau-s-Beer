@@ -16,7 +16,7 @@ beausBeers.beerArray = [];
 
 //Beer properties (from object returned from ajax call)
 
-beausBeers.userChoices = [];
+beausBeers.userChoices = {};
 
 beausBeers.beerStyle = [];
 
@@ -24,7 +24,7 @@ beausBeers.uniqueBeerStyle = [];
 
 beausBeers.beerStrength = {
 	All: 'All',
-	Light: 'Light',
+	Regular: 'Regular',
 	Strong: 'Strong'
 };
 
@@ -177,7 +177,7 @@ beausBeers.getData = function(){
 		}
 	})
 	.then(function(lcboObjects){
-		console.log(lcboObjects);
+		// console.log(lcboObjects);
 		let beerResult = lcboObjects.result;
 		beausBeers.dataArray(beerResult);
 	});
@@ -190,6 +190,7 @@ beausBeers.dataArray = function(beerResult){
 			style: beerResult[i].style,
 			price: '$' + (beerResult[i].price_in_cents/100),
 			alcohol_content: (beerResult[i].alcohol_content/100) + '%',
+			alcohol_volume: beerResult[i].alcohol_content/100,
 			volume: beerResult[i].volume_in_milliliters + ' ml' + ' ' + beerResult[i].package_unit_type,
 			// secondary_category: beerResult[i].secondary_category,
 			tertiary_category:beerResult[i].tertiary_category,
@@ -201,6 +202,11 @@ beausBeers.dataArray = function(beerResult){
 		if (beerResult[i].tertiary_category !== null){
 			beausBeers.beerType.push(beerResult[i].tertiary_category)
 		};
+		if (beausBeers.beerArray[i].alcohol_volume > 6){
+			beausBeers.beerArray[i].strength = 'Strong'
+		} else {
+			beausBeers.beerArray[i].strength = 'Regular'
+		}
 	};
 	// console.log('Working');
 	// console.log(beausBeers.beerArray);
@@ -226,7 +232,7 @@ beausBeers.dataArray = function(beerResult){
 		};
 	};
 
-	// console.log(beausBeers.beerArray);
+	console.log(beausBeers.beerArray);
 	beausBeers.fillSelectors();
 	beausBeers.locations();
 };
@@ -269,6 +275,8 @@ beausBeers.fillSelectors = function(){
 	$('#beer-strength').empty();
 	$('#beer-type').empty();
 
+	console.log('running')
+
 	beausBeers.uniqueBeerStyle.unshift('All');
 	beausBeers.uniqueBeerStyle.sort();
 	beausBeers.uniqueBeerType.unshift('All');
@@ -287,11 +295,12 @@ beausBeers.fillSelectors = function(){
 		$('#beer-type').append(('<option value"' + beausBeers.uniqueBeerType[i] + '">' + beausBeers.uniqueBeerType[i] + '</option>'));
 		// console.log('working');
 	};
-
-	// beausBeers.userInput();
 };
 
 beausBeers.templates = function() {
+	$('#beers-desktop').empty();
+	$("#beers-mobile").empty();
+	
 	var desktopTemplate = $("#desktopTemplate").html();
 	var compiledDT = Handlebars.compile(desktopTemplate);
 	beausBeers.beerArray.forEach(function(beer) {
@@ -316,63 +325,83 @@ beausBeers.displayAll = function(){
 	$('html, body').animate({
 		scrollTop: $('#beer-options').offset().top
 	}, 1000);
+	beausBeers.userInput();
+};
+
+// following functions sorts beers based on user input
+
+beausBeers.userInput = function(){
+//listening to change in the form
+
+$('#beer-style, #beer-strength, #beer-type').on('change', function(ev){
+	beausBeers.userResults = [];
+
+	let userStyle = $('#beer-style').val();
+	let userStrength = $('#beer-strength').val();
+	let userType = $('#beer-type').val();
+	// console.log(userStyle + userStrength + userType);
+	if(userStyle === 'All' && userStrength === 'All' && userType === 'All'){
+		beausBeers.templates();
+	}else {
+	if(userStyle !== 'All'){
+		beausBeers.userChoices.style = userStyle;
+	}
+
+	if(userStrength === 'Regular'){
+		beausBeers.userChoices.strength = 'Regular';
+	}else if (userStrength === 'Strong'){
+		beausBeers.userChoices.strength = 'Strong';
+	};
+
+	if(userType !== 'All'){
+		beausBeers.userChoices.tertiary_category = userType;
+	};
+	console.log(beausBeers.userChoices);
+
+	beausBeers.beerSorting();
+	}
+});
 	$('.paulund_modal').paulund_modal_box();
 };
 
-//following functions sorts beers based on user input
+beausBeers.beerSorting = function(){
+	console.log('calling');
+		console.log(beausBeers.userChoices);
+		for(let i = 0; i < beausBeers.beerArray.length; i++){
+			for(let x = 0; x < Object.keys(beausBeers.userChoices).length; x++){
+			console.log(beausBeers.userChoices[Object.keys(beausBeers.userChoices)[x]]);
+			let userChoice = beausBeers.userChoices[Object.keys(beausBeers.userChoices)[x]];
+					if(userChoice === beausBeers.beerArray[i][Object.keys(beausBeers.userChoices)]) {
+						console.log(beausBeers.beerArray[i]);
+						beausBeers.userResults.push(beausBeers.beerArray[i]);
+					}
+		};
 
-// beausBeers.userInput = function(){
-// //listening to change in the form
+	};
+	console.log(beausBeers.userResults)
+	beausBeers.templatesChoice();
+};
 
-// $('#beer-style, #beer-strength, #beer-type').on('change', function(){
-// 	beausBeers.userChoices = [];
-// 	let userStyle = $('#beer-style').val();
-// 	let userStrength = $('#beer-strength').val();
-// 	let userType = $('#beer-type').val();
-// 	// console.log(userStyle + userStrength + userType);
-// 	if(userStyle !== 'All'){
-// 		beausBeers.userChoices.style = userStyle;
-// 	};
+beausBeers.templatesChoice = function() {
+	console.log('working')
+	$('#beers-desktop').empty();
+	$("#beers-mobile").empty();
+	var desktopTemplate = $("#desktopTemplate").html();
+	var compiledDT = Handlebars.compile(desktopTemplate);
+	beausBeers.userResults.forEach(function(beer) {
+		var filledDT = compiledDT(beer);
+		$("#beers-desktop").append(filledDT);
+	});
 
-// 	if(userStrength === 'Light'){
-// 		beausBeers.userChoices.push({strength = 0});
-// 	}else if (userStrength === 'Strong'){
-// 		beausBeers.userChoices.push({strength = 1});
-// 	};
+	var mobileTemplate = $("#mobileTemplate").html();
+	var compiledMT = Handlebars.compile(mobileTemplate);
+	beausBeers.userResults.forEach(function(beer) {
+		var filledMT = compiledMT(beer);
+		$("#beers-mobile").append(filledMT);
+	});
 
-// 	if(userType !== 'All'){
-// 		beausBeers.userChoices.type = userType;
-// 	};
-// 	console.log(beausBeers.userChoices);
-
-// 	beausBeers.beerSorting();
-// });
-
-// beausBeers.beerSorting = function(){
-// 	//empty beers-desktop
-// 	// $('#beers-desktop').empty();
-// 	//if all are all, run basic function
-// 	// if (beausBeers.userChoices === []){
-// 	// 	beausBeers.templates();
-// 	// } else {
-// 		console.log(beausBeers.userChoices);
-// 		console.log(beausBeers.userChoices.length);
-// 	//it needs to search all arraybeer elements and find matches for the user choices
-// 		for(let x = 0; x < beausBeers.userChoices.length; x++){
-// 			console.log(working);
-// 			for(let i = 0; i < beausBeers.beerArray.length; i++){
-// 				if(beausBeers.userChoices[x] === beausBeers.beerArray[i]){
-// 					beausBeers.userResults.push(beausBeers.beerArray[i]);
-// 				}
-// 			}
-// 		// }
-// 		// console.log(beausBeers.userResults)
-// 	}
-// 	//when it finds matches, it needs to push them in a new array
-// 	//call template with new array and print unto screen
-// };
-
-// }
+	beausBeers.userChoices = [];
+};
 
 $(document).ready(function(){
 	beausBeers.init();
