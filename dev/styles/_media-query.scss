@@ -1,0 +1,76 @@
+@media screen and (max-width: 700px) {
+	body:before {
+		background-color: yellow;
+		content: "max-width 700px"
+	}
+	.right-image,
+	.main-image {
+		display: none;
+	}
+	header {
+		.wrapper {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			.left-info {
+				width: 100%;
+
+				.content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					h1 {
+						text-align: center;
+					}
+				}
+			}
+
+			.center-container {
+				width: 100%;
+			}
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	#beers-desktop {
+		display: none;
+	}
+	#beers-mobile {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.dropdown-menus {
+		flex-direction: column;
+		align-items: center;
+	}
+	.site-devs {
+		flex-direction: column;
+		align-items: center;
+		
+		.first-dev,
+		.second-dev,
+		.third-dev {
+			width: 100%;
+		}
+	}
+	.second-dev {
+		border-top: 1px solid $blue;
+		border-bottom: 1px solid $blue;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	body:before {
+		background-color: red;
+		content: "max width 350px"
+	}
+	h1 {
+		@include font-size(24);
+	}
+}

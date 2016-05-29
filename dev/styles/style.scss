@@ -245,6 +245,8 @@ header {
 
 // #beers-mobile
 #beers-mobile {
+	display: none;
+	
 	details {
 		border-left: 2px solid $brown-dark;
 		margin-bottom: 20px;
@@ -252,8 +254,8 @@ header {
 		display: flex;
 	}
 
-	details:last-child{
-		margin-bottom:0;
+	details:last-child {
+		margin-bottom: 0;
 	}
 
 	details summary{
@@ -377,3 +379,5 @@ footer {
 		margin: auto;
 	}
 }
+
+@import "media-query";
