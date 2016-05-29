@@ -123,29 +123,29 @@ const beerDetails = [
 
 //init function
 beausBeers.init = function(){
-	beausBeers.getData();
-	// $('form').on('submit',function(e){
-	// 	e.preventDefault();
-	// 	beausBeers.beerArray = [];
-	// 	beausBeers.beerStyle = [];
-	// 	beausBeers.uniqueBeerStyle = [];
-	// 	beausBeers.beerType = [];
-	// 	beausBeers.uniqueBeerType = [];
-	// 	beausBeers.userResults = [];
-	// 	beausBeers.storeLocations = [];
-	// 	beausBeers.userChoices = [];
-	// 	$('#beers-desktop').empty();
-	// 	$('#beers-mobile').empty();
+	// beausBeers.getData();
+	$('form').on('submit',function(e){
+		e.preventDefault();
+		beausBeers.beerArray = [];
+		beausBeers.beerStyle = [];
+		beausBeers.uniqueBeerStyle = [];
+		beausBeers.beerType = [];
+		beausBeers.uniqueBeerType = [];
+		beausBeers.userResults = [];
+		beausBeers.storeLocations = [];
+		beausBeers.userChoices = [];
+		$('#beers-desktop').empty();
+		$('#beers-mobile').empty();
 
-	// 	//store the input from the user into a variable
-	// 	var postalCode = $("input[name=postalCode]").val();
-	// 	//postal code in uppercase for the query
-	// 	var postalCodeUser = postalCode.toUpperCase();
-	// 	console.log(postalCodeUser);
-	// 	// $('.formWrapper form').css('display', 'none');
-	// 	// $('.formWrapper').append("<img src='assets/images/ajax-loader.gif' alt='Loading...'>");
-	// 	beausBeers.checkPostalCode(postalCodeUser);
-	// });
+		//store the input from the user into a variable
+		var postalCode = $("input[name=postalCode]").val();
+		//postal code in uppercase for the query
+		var postalCodeUser = postalCode.toUpperCase();
+		console.log(postalCodeUser);
+		$('.form-postcode form').css('display', 'none');
+		$('.form-postcode').append("<img src='images/gears.gif' alt='Loading...'>");
+		beausBeers.checkPostalCode(postalCodeUser);
+	});
 };
 
 beausBeers.checkPostalCode = function(postalCodeUser){
@@ -240,8 +240,8 @@ beausBeers.locations = function(){
 			headers: { 'Authorization': ' Token ' + beausBeers.apiKey},
 			data: {
 				id:beausBeers.beerArray[x].product_id,
-				geo:'m6g1j6'
-				// geo:beausBeers.userPostalCode
+				// geo:'m6g1j6'
+				geo:beausBeers.userPostalCode
 			},
 			async:false,
 		})
@@ -305,6 +305,17 @@ beausBeers.templates = function() {
 		var filledMT = compiledMT(beer);
 		$("#beers-mobile").append(filledMT);
 	});
+
+	beausBeers.displayAll();
+};
+
+beausBeers.displayAll = function(){
+	$('.beer-options').css('display', 'block')
+	$('.form-postcode form').css('display', 'block');
+	$('.form-postcode img').css('display', 'none');
+	$('html, body').animate({
+		scrollTop: $('#beer-options').offset().top
+	}, 1000);
 };
 
 //following functions sorts beers based on user input

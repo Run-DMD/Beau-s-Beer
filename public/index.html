@@ -23,7 +23,7 @@
 			<div class="form-postcode">
 				<form>
 					<h4><label for="post-code">Enter your postal code!</label></h4>
-						<input name='postalCode' type="text" maxlength='7' placeholder="M6G 4X8">
+						<input name='postalCode' type="text" maxlength='7' placeholder="P0S 7A1">
 						<input type="submit" value="Submit">
 				</form>
 			</div>
@@ -37,7 +37,7 @@
 </header>
 <body>
 	<!-- DROPDOWN AND BEER OPTIONS -->
-	<section class='beer-options'>
+	<section id='beer-options' class='beer-options'>
 		<div class="wrapper">
 			<div class='dropdown-menus'>
 				<select id="beer-style">
@@ -127,18 +127,18 @@
 					<figcaption class="beer-name">{{name}}</figcaption>
 				</div>
 			</summary>
+			<p class='firstp'>{{style}}</p>
 			<div class="alcohol-style-price">
 				<p>{{alcohol_content}}</p>
-				<p>{{style}}</p>
 				<p>{{price}}</p>
 			</div>
-			<p>Stocked at: </p>
+			<p class="beer-description">{{description}}</p>
+			<p class="locations">Stocked at: </p>
 			<ul>
 				<li>{{location1}}</li>
 				<li>{{location2}}</li>
 				<li>{{location3}}</li>
 			</ul>
-			<p class="beer-description">{{description}}</p>
 		</details>
 	</script>
 	<script src="scripts/script.js"></script>

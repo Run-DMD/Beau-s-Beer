@@ -120,6 +120,7 @@ header {
 .beer-options {
 	background: $blue;
 	border-top: 1px solid $brown-medium;
+	display:none;
 
 	.dropdown-menus {
 		display: flex;
@@ -198,12 +199,16 @@ header {
 	details {
 		border-left: 2px solid $brown-dark;
 		margin-bottom: 20px;
-		padding: 2px 5px 5px 5px;
+		padding: 2px 10px 5px 10px;
 		display: flex;
 	}
 
 	details:last-child{
 		margin-bottom:0;
+	}
+
+	details summary{
+		padding:7px 0;
 	}
 
 	details summary::-webkit-details-marker {
@@ -224,25 +229,57 @@ header {
 		@include font-size(12);
 		font-weight: bold;
 	}
+
+	.firstp{
+		width:100%;
+		text-align:center;
+		font-weight:bold;
+		letter-spacing:0;
+		margin-top:10px;
+	}
+
 	.alcohol-style-price {
-		margin-top: 10px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		padding:10px 0;
 		
-		p:nth-of-type(2) {
-			background-color: $brown-light;
-			border-radius: 5px;
-			color: $brown-dark;
-			@include font-size(8);
-			padding: 5px;
+		// p:nth-of-type(2) {
+		// 	background-color: $brown-light;
+		// 	border-radius: 5px;
+		// 	color: $brown-dark;
+		// 	@include font-size(8);
+		// 	padding: 5px;
+		// }
+		p{
+			text-align:center;
+			font-weight:bold;
+			letter-spacing:0;
+			margin:0 5px;
 		}
+
 	}
 
 	.beer-description {
 		font-style: italic;
 		letter-spacing: 0.5px;
+		padding-bottom:10px;
+		text-align:center;
 	}
+	
+	.locations{
+		padding-bottom:10px;
+		font-weight:bold;
+	}
+
+	ul li{
+		@include font-size(9);
+		list-style:circle;
+		margin-left:20px;
+		margin-bottom:5px;
+		line-height:20px;
+	}
+
 }
 // FOOTER
 

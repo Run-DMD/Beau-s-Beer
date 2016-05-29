@@ -334,7 +334,8 @@ header {
 
 .beer-options {
   background: #a5babb;
-  border-top: 1px solid #c4a077; }
+  border-top: 1px solid #c4a077;
+  display: none; }
   .beer-options .dropdown-menus {
     display: -ms-flexbox;
     display: flex;
@@ -405,12 +406,15 @@ header {
 #beers-mobile details {
   border-left: 2px solid #522c1b;
   margin-bottom: 20px;
-  padding: 2px 5px 5px 5px;
+  padding: 2px 10px 5px 10px;
   display: -ms-flexbox;
   display: flex; }
 
 #beers-mobile details:last-child {
   margin-bottom: 0; }
+
+#beers-mobile details summary {
+  padding: 7px 0; }
 
 #beers-mobile details summary::-webkit-details-marker {
   display: none; }
@@ -433,25 +437,44 @@ header {
   font-size: 1.2rem;
   font-weight: bold; }
 
+#beers-mobile .firstp {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-top: 10px; }
+
 #beers-mobile .alcohol-style-price {
-  margin-top: 10px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-  #beers-mobile .alcohol-style-price p:nth-of-type(2) {
-    background-color: #f5dfbe;
-    border-radius: 5px;
-    color: #522c1b;
-    font-size: 8px;
-    font-size: 0.8rem;
-    padding: 5px; }
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 10px 0; }
+  #beers-mobile .alcohol-style-price p {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0 5px; }
 
 #beers-mobile .beer-description {
   font-style: italic;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  text-align: center; }
+
+#beers-mobile .locations {
+  padding-bottom: 10px;
+  font-weight: bold; }
+
+#beers-mobile ul li {
+  font-size: 9px;
+  font-size: 0.9rem;
+  list-style: circle;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  line-height: 20px; }
 
 footer {
   width: 100%;
