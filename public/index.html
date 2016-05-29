@@ -9,35 +9,35 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 	<!-- <script src="scripts/jquery.paulund_modal_box.js"></script> -->
 </head>
-	<!-- HEADER -->
-<header>
-	<div class="wrapper">
-		<div class='left-info'>
-			<div class='content'>
-				<figure class='logo'>
-				<img src="images/logo.svg" alt="Beaus Beer Logo">
-				</figure>
-				<h1>Seasonal Beers!</h1>
-				<p>Beau's seasonal beer finder</p>
-			</div>
-		</div>
-		<div class='center-container'>
-			<div class="form-postcode">
-				<form>
-					<h4><label for="post-code">Enter your postal code!</label></h4>
-						<input name='postalCode' type="text" maxlength='7' placeholder="P0S 7A1">
-						<input type="submit" value="Submit">
-				</form>
-			</div>
-		</div>
-		<div class='right-image'>
-			<figure class='main-image'>
-				<img src="images/bottle.png" alt="Beaus beer bottle on side of page">
-			</figure>
-		</div>
-	</div>
-</header>
 <body>
+	<!-- HEADER -->
+	<header>
+		<div class="wrapper">
+			<div class='left-info'>
+				<div class='content'>
+					<figure class='logo'>
+					<img src="images/logo.svg" alt="Beaus Beer Logo">
+					</figure>
+					<h1>Seasonal Beers!</h1>
+					<p>Beau's seasonal beer finder</p>
+				</div>
+			</div>
+			<div class='center-container'>
+				<div class="form-postcode">
+					<form>
+						<h4><label for="post-code">Enter your postal code!</label></h4>
+							<input name='postalCode' type="text" maxlength='7' placeholder="P0S 7A1">
+							<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+			<div class='right-image'>
+				<figure class='main-image'>
+					<img src="images/bottle.png" alt="Beaus beer bottle on side of page">
+				</figure>
+			</div>
+		</div>
+	</header>
 	<!-- DROPDOWN AND BEER OPTIONS -->
 	<section id='beer-options' class='beer-options'>
 		<div class="wrapper">
@@ -62,7 +62,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- FOOTER SECTION -->
 	<footer>
 	<div class="wrapper">
 		<h2>Site made by:</h2>
@@ -128,7 +127,7 @@
 			<summary>
 				<div>
 					<img src="{{image}}" alt="Picture of beer label">
-					<figcaption class="beer-name">{{name}}</figcaption>
+					<figcaption class="beer-name">{{name}} +</figcaption>
 				</div>
 			</summary>
 			<p class='firstp'>{{style}}</p>
