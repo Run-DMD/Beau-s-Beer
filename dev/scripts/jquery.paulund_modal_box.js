@@ -7,11 +7,11 @@
 		// Default parameters
 
 		var options = $.extend({
-			height : "250",
-			width : "500",
-			top: "20%",
-			left: "30%",
-		},prop);
+				height : "250",
+				width : "500",
+				top: "20%",
+				left: "30%",
+				},prop);
 				
 		return this.click(function(e){
 			add_block_page();
