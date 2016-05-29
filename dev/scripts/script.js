@@ -361,6 +361,7 @@ $('#beer-style, #beer-strength, #beer-type').on('change', function(ev){
 	beausBeers.beerSorting();
 	}
 });
+	$('.paulund_modal').paulund_modal_box();
 };
 
 beausBeers.beerSorting = function(){

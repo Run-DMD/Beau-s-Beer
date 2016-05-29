@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!-- <script src="scripts/jquery.paulund_modal_box.js"></script> -->
 </head>
 	<!-- HEADER -->
 <header>
@@ -27,7 +29,6 @@
 						<input type="submit" value="Submit">
 				</form>
 			</div>
-			<!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
 		</div>
 		<div class='right-image'>
 			<figure class='main-image'>
@@ -40,7 +41,6 @@
 	<!-- DROPDOWN AND BEER OPTIONS -->
 	<section id='beer-options' class='beer-options'>
 		<div class="wrapper">
-		<!-- <a name="anchor"></a> -->
 			<div class='dropdown-menus'>
 				<select id="beer-style">
 					<option value="">OPTION ONE</option>
@@ -62,8 +62,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- MAP -->
-	<!-- <section class='map'></section> -->
+	<!-- FOOTER SECTION -->
 	<footer>
 	<div class="wrapper">
 		<h2>Site made by:</h2>
@@ -114,8 +113,10 @@
 				<div class="overlay-text">
 					<figcaption class="beer-name">{{name}}</figcaption>
 					<button>
-						<img src="icons/magnifier.svg" alt="Magnifying glass to show more details">
+						<a href="#" class="paulund_modal">
+						<img src="icons/magnifier.svg" alt="Magnifying glass to show more details"></a>
 					</button>
+					</div>
 				</div>
 			</div>
 		</figure>
@@ -145,5 +146,12 @@
 		</details>
 	</script>
 	<script src="scripts/script.js"></script>
+	<script src="scripts/jquery.paulund_modal_box.js"></script>
+	<script>
+	$(document).ready(function(){
+		console.log('modal loading')
+		$('.paulund_modal').paulund_modal_box();
+	});
+	</script>
 </body>
 </html>
