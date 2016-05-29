@@ -316,6 +316,7 @@ beausBeers.displayAll = function(){
 	$('html, body').animate({
 		scrollTop: $('#beer-options').offset().top
 	}, 1000);
+	$('.paulund_modal').paulund_modal_box();
 };
 
 //following functions sorts beers based on user input

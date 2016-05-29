@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/Run-DMD/Beaus-Beer/issues"
   },
-  "homepage": "https://github.com/Run-DMD/Beaus-Beer#readme"
+  "homepage": "https://github.com/Run-DMD/Beaus-Beer#readme",
+  "dependencies": {
+    "lightbox2": "^2.8.2"
+  }
 }
