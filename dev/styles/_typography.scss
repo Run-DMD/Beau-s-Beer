@@ -4,6 +4,13 @@ $fontserif: 'Abril Fatface', cursive;
 
 $fontsans:'Open Sans', sans-serif;
 
+// Color palette
+$brown-light: #f5dfbe;
+$brown-medium: #c4a077;
+$brown-medium-rgba: rgba(196, 160, 119, 0.75);
+$brown-dark: #522c1b;
+$blue: #a5babb;
+
 @mixin font-size($size-value){
 	font-size:$size-value * 1px;
 	font-size:($size-value/10) * 1rem;
