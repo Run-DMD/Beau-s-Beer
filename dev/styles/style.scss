@@ -198,9 +198,11 @@ header {
 	.alcohol-style-price {
 		display: flex;
 		justify-content: space-around;
+		width: 100%;
 	}
-	.ul li {
+	ul li {
 		@include font-size(10);
+		letter-spacing: 1.5px;
 	}
 }
 //.detailed-view
