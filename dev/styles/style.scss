@@ -5,7 +5,7 @@
 // Color palette
 $brown-light: #f5dfbe;
 $brown-medium: #c4a077;
-$brown-medium-rgba: rgba(196, 160, 119, 0.75);
+$brown-medium-rgba: rgba(196, 160, 119, 0.9);
 $brown-dark: #522c1b;
 $blue: #a5babb;
 
@@ -182,7 +182,7 @@ header {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
 	}
 	.beer-name {
 		@include font-size(14);
@@ -202,7 +202,11 @@ header {
 	}
 	ul li {
 		@include font-size(10);
-		letter-spacing: 1.5px;
+		letter-spacing: 2px;
+	}
+	ul li:first-child,
+	ul li:nth-child(2) {
+		margin-bottom: 15px;
 	}
 }
 //.detailed-view
