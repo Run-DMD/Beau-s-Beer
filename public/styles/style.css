@@ -330,7 +330,7 @@ header {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     .beer-options .dropdown-menus .selector {
-      width: 33.3%;
+      width: 275px;
       text-align: center; }
     .beer-options .dropdown-menus .beer-style,
     .beer-options .dropdown-menus .beer-strength,
