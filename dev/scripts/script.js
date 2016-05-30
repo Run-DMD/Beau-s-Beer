@@ -126,6 +126,7 @@ beausBeers.init = function(){
 	// beausBeers.getData();
 	$('form').on('submit',function(e){
 		e.preventDefault();
+		beausBeers.counter = 0;
 		beausBeers.beerArray = [];
 		beausBeers.beerStyle = [];
 		beausBeers.uniqueBeerStyle = [];
@@ -271,9 +272,9 @@ beausBeers.locations = function(){
 
 beausBeers.fillSelectors = function(){
 	//filling selectors by putting all option and pushing our unique properties for style and type
-	$('#beer-style').empty();
-	$('#beer-strength').empty();
-	$('#beer-type').empty();
+	$('.beer-style').empty();
+	$('.beer-strength').empty();
+	$('.beer-type').empty();
 
 	console.log('running')
 
@@ -283,16 +284,16 @@ beausBeers.fillSelectors = function(){
 	beausBeers.uniqueBeerType.sort();
 	// console.log(beausBeers.uniqueBeerStyle);
 	for(let i = 0; i < beausBeers.uniqueBeerStyle.length; i++){
-		$('#beer-style').append(('<option value"' + beausBeers.uniqueBeerStyle[i] + '">' + beausBeers.uniqueBeerStyle[i] + '</option>'))
+		$('.beer-style').append(('<option value"' + beausBeers.uniqueBeerStyle[i] + '">' + beausBeers.uniqueBeerStyle[i] + '</option>'))
 	};
 	
 	for(let Strength in beausBeers.beerStrength){
-		$('#beer-strength').append(('<option value"' + Strength + '">' + Strength + '</option>'));
+		$('.beer-strength').append(('<option value"' + Strength + '">' + Strength + '</option>'));
 	};
 
 	// console.log(beausBeers.uniqueBeerType);
 	for(let i = 0; i < beausBeers.uniqueBeerType.length; i++){
-		$('#beer-type').append(('<option value"' + beausBeers.uniqueBeerType[i] + '">' + beausBeers.uniqueBeerType[i] + '</option>'));
+		$('.beer-type').append(('<option value"' + beausBeers.uniqueBeerType[i] + '">' + beausBeers.uniqueBeerType[i] + '</option>'));
 		// console.log('working');
 	};
 };
@@ -325,20 +326,34 @@ beausBeers.displayAll = function(){
 	$('html, body').animate({
 		scrollTop: $('#beer-options').offset().top
 	}, 1000);
+	if(beausBeers.counter < 1){
 	beausBeers.userInput();
+	beausBeers.counter = 1;
+	}
 };
 
 // following functions sorts beers based on user input
 
 beausBeers.userInput = function(){
-//listening to change in the form
+$('#beer-type').on('click', function(){
+	$('#beer-strength, #beer-style').prop('selectedIndex',0);
+});
 
-$('#beer-style, #beer-strength, #beer-type').on('change', function(ev){
+$('#beer-strength').on('click', function(){
+	$('#beer-type, #beer-style').prop('selectedIndex',0);
+});
+
+$('#beer-style').on('click', function(){
+	$('#beer-type, #beer-strength').prop('selectedIndex',0);
+});
+
+//listening to change in the form
+$('.beer-style, .beer-strength, .beer-type').on('change', function(ev){
 	beausBeers.userResults = [];
 
-	let userStyle = $('#beer-style').val();
-	let userStrength = $('#beer-strength').val();
-	let userType = $('#beer-type').val();
+	let userStyle = $('.beer-style').val();
+	let userStrength = $('.beer-strength').val();
+	let userType = $('.beer-type').val();
 	// console.log(userStyle + userStrength + userType);
 	if(userStyle === 'All' && userStrength === 'All' && userType === 'All'){
 		beausBeers.templates();

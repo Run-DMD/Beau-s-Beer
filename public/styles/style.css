@@ -329,9 +329,12 @@ header {
     padding: 3%;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
-    .beer-options .dropdown-menus #beer-style,
-    .beer-options .dropdown-menus #beer-strength,
-    .beer-options .dropdown-menus #beer-type {
+    .beer-options .dropdown-menus .selector {
+      width: 33.3%;
+      text-align: center; }
+    .beer-options .dropdown-menus .beer-style,
+    .beer-options .dropdown-menus .beer-strength,
+    .beer-options .dropdown-menus .beer-type {
       background: #becece;
       width: 275px;
       padding: 5px;
@@ -339,7 +342,11 @@ header {
       line-height: 1;
       border: 0;
       outline: #a5babb;
-      height: 34px; }
+      height: 34px;
+      margin-top: 10px; }
+    .beer-options .dropdown-menus label {
+      font-size: 10px;
+      font-size: 1rem; }
 
 #beers-desktop {
   display: -ms-flexbox;
