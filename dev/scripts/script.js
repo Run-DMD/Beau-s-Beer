@@ -170,6 +170,7 @@ beausBeers.getData = function(){
 	$.ajax({
 		url:'https://lcboapi.com/products',
 		headers: { 'Authorization': ' Token ' + beausBeers.apiKey},
+		dataType: "json",
 		data: {
 			q:"Beau's",
 			where: 'is_seasonal',
@@ -245,6 +246,7 @@ beausBeers.locations = function(){
 		$.ajax({
 			url:'https://lcboapi.com/stores',
 			headers: { 'Authorization': ' Token ' + beausBeers.apiKey},
+			dataType: "json"
 			data: {
 				id:beausBeers.beerArray[x].product_id,
 				// geo:'m6g1j6'
