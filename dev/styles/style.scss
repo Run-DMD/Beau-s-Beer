@@ -195,19 +195,41 @@ header {
 		font-weight: bold;
 		line-height: 1.5rem;
 		text-align: center;
+		margin-bottom:10px;
 	}
 	.alcohol-style-price {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
+
+		p{
+			@include font-size(10);
+		}
 	}
 	ul li {
 		@include font-size(10);
 		letter-spacing: 2px;
+		text-align:center;
 	}
 	ul li:first-child,
 	ul li:nth-child(2) {
 		margin-bottom: 15px;
+	}
+
+	.firstp{
+		width:100%;
+		font-weight:bold;
+		letter-spacing:0;
+		margin:10px 0;
+		text-align:center;
+		@include font-size(10);
+	}
+
+	p.locations{
+		margin:10px 0; 
+		@include font-size(10);
+		font-weight:bold;
+		letter-spacing:0;
 	}
 }
 //.detailed-view
