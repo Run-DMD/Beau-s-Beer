@@ -363,7 +363,7 @@ header {
     #beers-desktop figure:hover .overlay {
       opacity: 1.0; }
   #beers-desktop .overlay {
-    background-color: rgba(196, 160, 119, 0.75);
+    background-color: rgba(196, 160, 119, 0.9);
     height: 100%;
     opacity: 0;
     padding: 10px;
@@ -378,8 +378,8 @@ header {
         align-items: center;
     -ms-flex-direction: column;
         flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    -ms-flex-pack: center;
+        justify-content: center; }
   #beers-desktop .beer-name {
     font-size: 14px;
     font-size: 1.4rem;
@@ -400,7 +400,10 @@ header {
   #beers-desktop ul li {
     font-size: 10px;
     font-size: 1rem;
-    letter-spacing: 1.5px; }
+    letter-spacing: 2px; }
+  #beers-desktop ul li:first-child,
+  #beers-desktop ul li:nth-child(2) {
+    margin-bottom: 15px; }
 
 .detailed-view {
   margin: 0 auto;
