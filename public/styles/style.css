@@ -395,10 +395,12 @@ header {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around; }
-  #beers-desktop .ul li {
+        justify-content: space-around;
+    width: 100%; }
+  #beers-desktop ul li {
     font-size: 10px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    letter-spacing: 1.5px; }
 
 .detailed-view {
   margin: 0 auto;
