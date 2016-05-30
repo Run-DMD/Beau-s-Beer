@@ -42,15 +42,24 @@
 	<section id='beer-options' class='beer-options'>
 		<div class="wrapper">
 			<div class='dropdown-menus'>
-				<select id="beer-style">
-					<option value="">OPTION ONE</option>
-				</select>
-				<select id="beer-strength">
-					<option value="">OPTION TWO</option>
-				</select>
-				<select id="beer-type">
-					<option value="">OPTION THREE</option>
-				</select>
+				<div class="selector">
+					<label for='beer-style'>Style</label>
+					<select id="beer-style" class="beer-style" name="beer-style">
+						<option value="">OPTION ONE</option>
+					</select>
+				</div>
+				<div class="selector">
+					<label for="beer-strength">Alcoholic Content</label>
+					<select id="beer-strength" class="beer-strength" name="beer-strength">
+						<option value="">OPTION TWO</option>
+					</select>
+				</div>
+				<div class="selector">
+					<label for="beer-type">Type</label>
+					<select id="beer-type" class="beer-type" name="beer-type">
+						<option value="">OPTION THREE</option>
+					</select>
+				</div>
 			</div>
 			<div class="beers-container">
 				<div id="beers-desktop">
