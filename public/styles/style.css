@@ -343,7 +343,8 @@ header {
       border: 0;
       outline: #a5babb;
       height: 34px;
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-bottom: 15px; }
     .beer-options .dropdown-menus label {
       font-size: 10px;
       font-size: 1rem; }
@@ -553,6 +554,23 @@ footer {
         align-self: baseline;
     margin: auto; }
 
+@media screen and (max-width: 1000px) {
+  .dropdown-menus {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center; }
+  #beers-desktop figure {
+    background-position: center;
+    background-size: cover;
+    padding-bottom: calc(50% - 20px);
+    margin: 10px 10px;
+    position: relative;
+    width: calc(50% - 20px); }
+    #beers-desktop figure:hover .overlay {
+      opacity: 1.0; } }
+
 @media screen and (max-width: 700px) {
   .right-image,
   .main-image {
@@ -589,12 +607,8 @@ footer {
     display: block; } }
 
 @media screen and (max-width: 560px) {
-  .dropdown-menus {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        -ms-grid-row-align: center;
-        align-items: center; }
+  header form {
+    text-align: center; }
   .site-devs {
     -ms-flex-direction: column;
         flex-direction: column;
