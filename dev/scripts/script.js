@@ -144,7 +144,7 @@ beausBeers.init = function(){
 		var postalCodeUser = postalCode.toUpperCase();
 		console.log(postalCodeUser);
 		$('.form-postcode form').css('display', 'none');
-		$('.form-postcode').append("<img src='public/images/gears.gif' alt='Loading...'>");
+		$('.form-postcode').append("<img src='../images/gears.gif' alt='Loading...'>");
 		beausBeers.checkPostalCode(postalCodeUser);
 	});
 };
