@@ -1,8 +1,4 @@
 @media screen and (max-width: 700px) {
-	body:before {
-		background-color: yellow;
-		content: "max-width 700px"
-	}
 	.right-image,
 	.main-image {
 		display: none;
@@ -66,10 +62,6 @@
 }
 
 @media screen and (max-width: 350px) {
-	body:before {
-		background-color: red;
-		content: "max width 350px"
-	}
 	h1 {
 		@include font-size(24);
 	}
