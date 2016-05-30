@@ -185,25 +185,22 @@ header {
 		justify-content: space-around;
 	}
 	.beer-name {
-		@include font-size(20);
+		@include font-size(14);
 		line-height: 1.0;
 	}
 	figcaption {
 		color: $brown-dark;
-		@include font-size(14);
+		@include font-size(10);
 		font-weight: bold;
 		line-height: 1.5rem;
 		text-align: center;
 	}
-	button {
-		background-color: transparent;
-		border: none;
-		height: 50px;
-		width: 50px;
+	.alcohol-style-price {
+		display: flex;
+		justify-content: space-around;
 	}
-	button img {
-		height: 50px;
-		width: 50px;
+	.ul li {
+		@include font-size(10);
 	}
 }
 //.detailed-view

@@ -139,11 +139,18 @@
 			<div class="overlay">
 				<div class="overlay-text">
 					<figcaption class="beer-name">{{name}}</figcaption>
-					<button>
-						<a href="#" class="paulund_modal">
-						<img src="icons/magnifier.svg" alt="Magnifying glass to show more details"></a>
-					</button>
+					<p class='firstp'>{{style}}</p>
+					<div class="alcohol-style-price">
+						<p>{{alcohol_content}}</p>
+						<p>{{price}}</p>
 					</div>
+					<p class="beer-description">{{description}}</p>
+					<p class="locations">Stocked at: </p>
+					<ul>
+						<li>{{location1}}</li>
+						<li>{{location2}}</li>
+						<li>{{location3}}</li>
+					</ul>
 				</div>
 			</div>
 		</figure>
