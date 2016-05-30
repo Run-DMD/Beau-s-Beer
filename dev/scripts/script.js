@@ -258,9 +258,9 @@ beausBeers.locations = function(){
 			// console.log(beausBeers.storeLocations);
 			let userLocations = beausBeers.storeLocations[x].result
 			// console.log(userLocations);
-			beausBeers.beerArray[x].location1 = userLocations[0].address_line_1 + ', ' + userLocations[0].city + ', ' + userLocations[0].postal_code;
-			beausBeers.beerArray[x].location2 = userLocations[1].address_line_1 + ', ' + userLocations[1].city + ', ' + userLocations[1].postal_code;
-			beausBeers.beerArray[x].location3 = userLocations[2].address_line_1 + ', ' + userLocations[2].city + ', ' + userLocations[2].postal_code;
+			beausBeers.beerArray[x].location1 = userLocations[0].address_line_1 + ', ' + userLocations[0].city;
+			beausBeers.beerArray[x].location2 = userLocations[1].address_line_1 + ', ' + userLocations[1].city;
+			beausBeers.beerArray[x].location3 = userLocations[2].address_line_1 + ', ' + userLocations[2].city;
 		});
 	}
 		console.log(beausBeers.beerArray)

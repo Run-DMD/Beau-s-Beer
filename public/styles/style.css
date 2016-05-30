@@ -391,20 +391,39 @@ header {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.5rem;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 10px; }
   #beers-desktop .alcohol-style-price {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 100%; }
+    #beers-desktop .alcohol-style-price p {
+      font-size: 10px;
+      font-size: 1rem; }
   #beers-desktop ul li {
     font-size: 10px;
     font-size: 1rem;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    text-align: center; }
   #beers-desktop ul li:first-child,
   #beers-desktop ul li:nth-child(2) {
     margin-bottom: 15px; }
+  #beers-desktop .firstp {
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 10px;
+    font-size: 1rem; }
+  #beers-desktop p.locations {
+    margin: 10px 0;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0; }
 
 .detailed-view {
   margin: 0 auto;
