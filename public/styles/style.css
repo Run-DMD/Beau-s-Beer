@@ -381,24 +381,24 @@ header {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   #beers-desktop .beer-name {
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.0; }
   #beers-desktop figcaption {
     color: #522c1b;
-    font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 10px;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.5rem;
     text-align: center; }
-  #beers-desktop button {
-    background-color: transparent;
-    border: none;
-    height: 50px;
-    width: 50px; }
-  #beers-desktop button img {
-    height: 50px;
-    width: 50px; }
+  #beers-desktop .alcohol-style-price {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  #beers-desktop .ul li {
+    font-size: 10px;
+    font-size: 1rem; }
 
 .detailed-view {
   margin: 0 auto;
@@ -552,9 +552,6 @@ footer {
     margin: auto; }
 
 @media screen and (max-width: 700px) {
-  body:before {
-    background-color: yellow;
-    content: "max-width 700px"; }
   .right-image,
   .main-image {
     display: none; }
@@ -611,9 +608,6 @@ footer {
     border-bottom: 1px solid #a5babb; } }
 
 @media screen and (max-width: 350px) {
-  body:before {
-    background-color: red;
-    content: "max width 350px"; }
   h1 {
     font-size: 24px;
     font-size: 2.4rem; } }
