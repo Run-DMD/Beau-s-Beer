@@ -42,82 +42,82 @@ const beerDetails = [
 	{
 		name: "Best of Beau's 2015",
 		description: "The 'Best of Beau's' Mix is a holiday mix pack featuring an eclectic mix of our most sought after one-off creations. All four beers were chosen through popular vote, by those who know best – our fans!",
-		image: "../images/best-of-beaus-2015-web.jpg"
+		image: "images/best-of-beaus-2015-web.jpg"
 	},
 	{
 		name: "Beau's Bog Water Gruit",
 		description: "Bog Water gruit is brewed with hand-harvested organic bog myrtle (a deciduous shrub native to Northern Ontario and Québec.) The bog myrtle contributes a sweet aroma, balanced bitterness, and herbal, spicy notes suggestive of a digestif. A Belgian yeast profile makes Bog Water a very complex and contemplative winter ale.",
-		image: "../images/bog-water-gruit.jpg"
+		image: "images/bog-water-gruit.jpg"
 	},
 		{
 		name: "Beaus Bush Fire Keg",
 		description: "Bush Fire is a flame-coloured ale infused with teas made from two plants native to South Africa, rooibos and honeybush. Spicy, earthy, and with a gentle touch of sweetness, this aromatic creation brings together two of the world’s most popular brews – tea and beer!",
-		image: "../images/bush-fire-keg.jpg"
+		image: "images/bush-fire-keg.jpg"
 	},
 		{
 		name: "Beau's Farm Table 80 Shilling",
 		description: "Farm Table Series are sessionable beers inspired by tradition and brewed true to a classic style. 80 Shilling is dry, toasty Scottish-style ale. This malt-focused sessionable ale is a deep-copper-colour, with mild-to-moderate caramel flavour and balanced hop presence.",
-		image: "../images/farm-table-80-shillling.jpg"
+		image: "images/farm-table-80-shillling.jpg"
 	},
 		{
 		name: "Beau's Farm Table Grisette",
 		description: "Farm Table Series are sessionable beers inspired by tradition and brewed true to a classic style. Farm Table: Grisette is a sessionable 4.9% – expect mild saison character and great drinkability from this golden ale.",
-		image: "../images/farm-table-grisette-web.jpg"
+		image: "images/farm-table-grisette-web.jpg"
 	},
 		{
-		name: "Beaus Farm Table Helles",
+		name: "Beau's Farm Table Helles",
 		description: "Farm Table Series are sessionable beers inspired by tradition and brewed true to a classic style. Farm Table Helles is a brilliant straw-coloured blond lager. A bona fide Bavarian beer garden classic, the Helles style balances a mildly bready, malt-accented flavour with subtle and delicate hops that linger to enjoy.",
-		image: "../images/farm-table-helles.jpg"
+		image: "images/farm-table-helles.jpg"
 	},
 		{
 		name: "Beau's Farm Table IPA",
 		description: "Farm Table Series are sessionable beers inspired by tradition and brewed true to a classic style. Farm Table: I.P.A. is an assertive yet-very-drinkable India Pale Ale that marries typical flavour profiles of the British and American interpretations of this style. Farm Table: I.P.A. is unfiltered, and dry-hopped in our conditioning tanks to amplify the hop aromas.",
-		image: "../images/farm-table-ipa.jpg"
+		image: "images/farm-table-ipa.jpg"
 	},
 		{
 		name: "Beau's Farm Table Marzen",
 		description: "Farm Table Series are sessionable beers inspired by tradition and brewed true to a classic style. Märzen is the traditional Oktoberfest style of beer. This orangey-amber, malty lager has just the right amount of hops to balance the Munich malts, and features an ultra-clean finish to complete the package.",
-		image: "../images/farm-table-marzen.jpg"
+		image: "images/farm-table-marzen.jpg"
 	},
 		{
 		name: "Beau's Farm Table Patersbier",
 		description: "Farm Table Series are sessionable beers inspired by tradition and brewed true to a classic style. Patersbier is a Belgian-style ale. Expect a great drinkable beer, with traditional Belgian yeast character.",
-		image: "../images/farm-table-patersbier.jpg"
+		image: "images/farm-table-patersbier.jpg"
 	},
 		{
-		name: "Beaus Haters Gonna Hate",
+		name: "Beau's Haters Gonna Hate",
 		description: "Haters Gonna Hate is an extra-strong interpretation of our flagship beer Lug Tread, which is a Kölsch-style lagered ale.",
-		image: "../images/haters-gonna-hate.jpg"
+		image: "images/haters-gonna-hate.jpg"
 	},
 		{
 		name: "Beau's Koru Belgian Ale",
 		description: "Koru Belgian-Style Pale Ale boasts interesting spicy, peppery yeast notes, with tropical fruit inflections from New Zealand nelson sauvin and rakau hops. Complex and tasty, with a dry finish.",
-		image: "../images/koru-belgian-ale.jpg"
+		image: "images/koru-belgian-ale.jpg"
 	},
 		{
 		name: "Kremlock Keg",
 		description: "Rye malt and rare Polish hops lends peppery notes and an herbal earthiness to this roggenbier, which blend harmoniously with hints of clove and banana contributed by the weizen yeast. Kremlock is part of the Pro-Am Series… cheers to Michel Lecavalier, who won the 2014 Beau’s Oktoberfest homebrew contest, earning the prize of brewing his beer in the Beau’s brewhouse for 2015!",
-		image: "../images/kremlock-keg.jpg"
+		image: "images/kremlock-keg.jpg"
 	},
 		{
 		name: "Beau's Le Coeur Noir Black IPA",
 		description: "Le Cœur Noir Black I.P.A. was designed and brewed collaboratively with Jordan Rainhard of Toronto’s Rainhard Brewing  (www.rainhardbrewing.com). Nearly opaque, this black I.P.A. offers up aromas of citrusy, piney hops with malt intonations, toast and restrained mocha.",
-		image: "../images/le-coeur-noir-black-ipa.jpg"
+		image: "images/le-coeur-noir-black-ipa.jpg"
 	},
 		{
 		name: "Beau's Maddaddamites Noobroo",
 		description: "From its elusive, intriguing aroma to its subtle yet celebratory aftertaste, this light but substantial beer has mysterious undertones of rosehips, elderberries, and mountain herbs, with a deeper tone of roots and woodsy bark. Fresh and spring-like, confident and down-to-earth yet inspirational, rooted in the wild world of foraging and gathering, NooBroo is everything the MaddAddamites would wish an all natural beer to be. Saint Euell Gibbons himself would applaud it! –- Margaret Atwood",
-		image: "../images/maddaddamites-noobroo.jpg"
+		image: "images/maddaddamites-noobroo.jpg"
 	},
 		{
 		name: "One Ping Only Keg",
 		description: "Dark as the stormy Baltic sea, with thick, chewy malts that satisfy, and rich aromas of chocolate, raisins and caramel. Barley and rye malts, oats, blended ale and lager yeasts and some rare Polish Marynka hops create layers upon layers of complexity.",
-		image: "../images/one-ping-only-keg.jpg"
+		image: "images/one-ping-only-keg.jpg"
 	},
 		{
-		name: "Beaus Original Gruit",
+		name: "Beau's Original Gruit",
 		description: "Original Gruit harkens back to the roots of gruit production by employing three of the most common historical ingredients in the brew: Labrador tea, bog myrtle and yarrow.",
-		image: "../images/original-gruit.jpg"
+		image: "images/original-gruit.jpg"
 	},
 ];
 
@@ -142,7 +142,7 @@ beausBeers.init = function(){
 		var postalCode = $("input[name=postalCode]").val();
 		//postal code in uppercase for the query
 		var postalCodeUser = postalCode.toUpperCase();
-		console.log(postalCodeUser);
+		// console.log(postalCodeUser);
 		$('.form-postcode form').css('display', 'none');
 		$('.form-postcode').append("<img src='images/gears.gif' alt='Loading...'>");
 		beausBeers.checkPostalCode(postalCodeUser);
@@ -181,6 +181,7 @@ beausBeers.getData = function(){
 		// console.log(lcboObjects);
 		let beerResult = lcboObjects.result;
 		beausBeers.dataArray(beerResult);
+		// console.log(beerResult);
 	});
 };
 
@@ -225,11 +226,12 @@ beausBeers.dataArray = function(beerResult){
 	});
 
 	for(let x = 0; x < beausBeers.beerArray.length; x++){
+				beausBeers.beerArray[x].image = "images/beer-no-img.jpg"
 		for(let i = 0; i < beerDetails.length; i++){
 			if(beausBeers.beerArray[x].name === beerDetails[i].name){
 				beausBeers.beerArray[x].description = beerDetails[i].description,
 				beausBeers.beerArray[x].image = beerDetails[i].image
-			};
+			}
 		};
 	};
 
@@ -263,7 +265,7 @@ beausBeers.locations = function(){
 			beausBeers.beerArray[x].location3 = userLocations[2].address_line_1 + ', ' + userLocations[2].city;
 		});
 	}
-		console.log(beausBeers.beerArray)
+		// console.log(beausBeers.beerArray)
 
 	beausBeers.templates();
 }
@@ -371,7 +373,7 @@ $('.beer-style, .beer-strength, .beer-type').on('change', function(ev){
 	if(userType !== 'All'){
 		beausBeers.userChoices.tertiary_category = userType;
 	};
-	console.log(beausBeers.userChoices);
+	// console.log(beausBeers.userChoices);
 
 	beausBeers.beerSorting();
 	}
@@ -380,8 +382,8 @@ $('.beer-style, .beer-strength, .beer-type').on('change', function(ev){
 };
 
 beausBeers.beerSorting = function(){
-	console.log('calling');
-		console.log(beausBeers.userChoices);
+	// console.log('calling');
+		// console.log(beausBeers.userChoices);
 		for(let i = 0; i < beausBeers.beerArray.length; i++){
 			for(let x = 0; x < Object.keys(beausBeers.userChoices).length; x++){
 			console.log(beausBeers.userChoices[Object.keys(beausBeers.userChoices)[x]]);
@@ -393,12 +395,12 @@ beausBeers.beerSorting = function(){
 		};
 
 	};
-	console.log(beausBeers.userResults)
+	// console.log(beausBeers.userResults)
 	beausBeers.templatesChoice();
 };
 
 beausBeers.templatesChoice = function() {
-	console.log('working')
+	// console.log('working')
 	$('#beers-desktop').empty();
 	$("#beers-mobile").empty();
 	var desktopTemplate = $("#desktopTemplate").html();

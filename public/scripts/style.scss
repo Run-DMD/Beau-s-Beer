@@ -1,0 +1,638 @@
+/*!
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'reset';
+@import 'normalize';
+@import 'variables';
+@import 'typography';
+@import 'header';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
+
+//lines
+
+.line-wrapper{
+	width:100px;
+	margin:0 auto;
+	margin-bottom:35px;
+	content:'';
+}
+
+.upperline{
+	border-bottom:2px solid $light-p-grey;
+	width:80px;
+	margin-bottom:5px;
+	float:left;
+	transition:all 1s ease;
+}
+
+.lowerline{
+	border-bottom:2px solid $light-p-grey;
+	width:80px;
+	float:right;
+	transition:all 1.5s ease;
+}
+
+//general styling
+
+//section sub header
+
+	h3.sub-head{
+		margin-bottom:35px;
+	}
+
+//about section
+
+section.about{
+	height:1350px;
+	background:$bg-grey;
+	&:hover .upperline,
+	&:hover .lowerline{
+		border-bottom:2px solid $red;
+	}
+
+	.container{
+		position:relative;
+	}
+
+	.about-title{
+		height:370px;
+		width:470px;
+		border:2px solid $dark-h-black;
+		position:absolute;
+		left: 0;
+		// top: 140px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		text-align:center;
+		-skrollr-animation-name: animation1;
+	}
+
+	@-skrollr-keyframes animation1 {
+		skrollr-300 {
+			top:110px;
+		}
+
+		skrollr-1000 {
+			top:140px;
+		}
+	}
+
+	.pseudo-div{
+		position:relative;
+	}
+
+	.pseudo-div:before{
+		content:'</>';
+		font-family:$Montserrat;
+		position:absolute;
+		top: -165px;
+		left:20px;
+		@include font-size(28);
+		background:$bg-grey;
+		padding:0 20px;
+	}
+
+	.about-img{
+		width:670px;
+		height:470px;
+		background:linear-gradient(0deg, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3)), url('images/about-img.jpg');
+		background-size:cover;
+		position:absolute;
+		// right: 0;
+		top: 190px;
+		-skrollr-animation-name: animation2;
+	}
+
+	@-skrollr-keyframes animation2 {
+		skrollr-300 {
+			right:-30px;
+		}
+
+		skrollr-1000 {
+			right:0px;
+		}
+	}
+
+	.about-bio{
+		width:770px;
+		height:570px;
+		position:absolute;
+		left: 0;
+		// top: 565px;
+		background:url('images/pattern-about.png');
+		z-index:1;
+		padding:40px;
+		color:rgb(187, 187, 187);
+		display:flex;
+		align-items:center;
+		-skrollr-animation-name: animation3;
+
+		p{
+			@include font-size(12);
+		}
+	}
+
+	@-skrollr-keyframes animation3 {
+		skrollr-300 {
+			top: 595px;
+		}
+
+		skrollr-1000 {
+			top: 565px;
+		}
+	}
+
+	.about-tag-line{
+		height:370px;
+		width:470px;
+		border:2px solid $dark-h-black;
+		position:absolute;
+		right: 0;
+		top: 865px;
+		padding:40px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		text-align:center;
+		z-index:2;
+		-skrollr-animation-name: animation5;
+	}
+
+	@-skrollr-keyframes animation5 {
+		skrollr-900 {
+			top: 895px;
+		}
+
+		skrollr-1400 {
+			top: 840px;
+		}
+	}
+}
+
+//skills section
+
+section.skills{
+	text-align:center;
+	&:hover .upperline,
+	&:hover .lowerline{
+		border-bottom:2px solid $red;
+	}
+	&:hover .skills-wrapper:before,
+	&:hover .pseudodiv:before{
+		color: $red;
+	}
+
+	svg.top-skills {
+	  display: block;
+	  width: 100%;
+	  height: 90px;
+	  background: white;
+	  fill:$bg-grey;
+	  margin-bottom:80px;
+	}
+
+	.skills-wrapper{
+		display:flex;
+		flex-wrap:wrap;
+		margin:20px 0;
+		margin-top:60px;
+		border:2px solid $dark-h-black;
+		padding:20px;
+		position:relative;
+	}
+
+	.skills-wrapper:before{
+		content:"What I work with...";
+		position:absolute;
+		top: -20px;
+		left: 40px;
+		@include font-size(16);
+		background:white;
+		padding:5px 10px;
+		font-family:$Montserrat;
+		transition:all 2s ease;
+	}
+
+	.skill{
+		padding:20px;
+		margin:20px;
+
+		i.devicons,
+		i.devicon-react-original,
+		i.fa-mobile{
+			@include font-size(36);
+		}
+
+		h6{
+			margin-top:15px;
+			max-width:100px;
+		}
+	}
+
+	.learn-skills{
+		border:2px solid $dark-h-black;
+		position:absolute;
+		bottom: -65px;
+		// right: 100px;
+		background:white;
+		-skrollr-animation-name: animation4;
+	}
+
+	@-skrollr-keyframes animation4 {
+		skrollr-2050 {
+			right: 70px;
+		}
+
+		skrollr-2400 {
+			right: 100px;
+		}
+	}
+
+	.pseudodiv{
+		position:relative;
+		display:flex;
+		flex-wrap:wrap;
+		padding:20px;
+	}
+
+	.pseudodiv:before{
+		content:'...what I\'m focused on learning.';
+		position:absolute;
+		top: -20px;
+		right: 10px;
+		@include font-size(16);
+		background:white;
+		padding:5px 10px;
+		font-family:$Montserrat;
+		transition:all 3s ease;
+	}
+
+	svg.bottom-skills {
+	  display: block;
+	  width: 100%;
+	  height: 90px;
+	  background: white;
+	  fill:$bg-grey;
+	  margin-top:200px;
+	}
+}
+
+section.portfolio{
+	background:$bg-grey;
+	text-align:center;
+	padding:100px 0 0 0;
+	&:hover .upperline,
+	&:hover .lowerline{
+		border-bottom:2px solid $red;
+	}
+
+	p.tag-line{
+		margin-bottom:60px;
+	}
+
+	.project{
+		padding:50px 0;
+		margin:0;
+		border-bottom:2px solid $dark-h-black;
+		position:relative;
+
+		.line-wrapper{
+			margin:0 0 20px 0;
+		}
+
+		a.figure-link{
+			width:50%;
+		}
+
+		figure{
+			height:300px;
+		}
+
+		aside.project-info{
+			text-align:left;
+			padding:20px;
+			width:50%;
+
+			h6.skills-involved{
+				margin-bottom:15px;
+			}
+
+			h4{
+				margin-bottom:20px;
+				text-transform:uppercase;
+			}
+
+			p.description-para{
+				margin-bottom:20px;
+			}
+		}
+	}
+
+	.button-wrapper{
+		display:flex;
+
+		button.view-live{
+			border:2px solid $dark-h-black;
+			padding:11px 20px 10px 20px;
+			border-radius:2px;
+			transition:all 0.5s ease;
+			&:hover{
+				border:2px solid $red;
+				background:$red;
+				color:white;
+			}
+			&:focus{
+				border:2px solid $red;
+				background:$red;
+				color:white;
+			}
+		}
+
+		button.view-git{
+			border:2px solid $dark-h-black;
+			padding:5px 10px;
+			margin:0 10px;
+			border-radius:2px;
+			transition:all 0.5s ease;
+			&:hover{
+				border:2px solid $red;
+				background:$red;
+				color:white;
+			}
+			&:focus{
+				border:2px solid $red;
+				background:$red;
+				color:white;
+			}
+		}
+
+		i{
+			@include font-size(19);
+		}
+	}
+
+	.project:nth-child(even){
+		display:flex;
+		border-left:2px solid $dark-h-black;
+
+		aside.project-info{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:flex-start;
+		}
+	}
+
+	.project:nth-child(odd){
+		display:flex;
+		flex-direction:row-reverse;
+		border-right:2px solid $dark-h-black;
+
+		aside.project-info{
+			text-align:right;
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:flex-end;
+		}
+	}
+
+	article:nth-child(7){
+		border-bottom:2px solid transparent;
+	}
+
+	//numbers
+
+	article:first-of-type:before{
+		position:absolute;
+		content:'01';
+		left: -22px;
+		top: 164px;
+		@include font-size(22);
+		font-family:$Montserrat;
+		background:$bg-grey;
+		padding:20px 0;
+	}
+
+	article:nth-of-type(2):before{
+		position:absolute;
+		content:'02';
+		right: -22px;
+		top: 164px;
+		@include font-size(22);
+		font-family:$Montserrat;
+		background:$bg-grey;
+		padding:20px 0;
+	}
+
+	article:nth-of-type(3):before{
+		position:absolute;
+		content:'03';
+		left: -22px;
+		top: 164px;
+		@include font-size(22);
+		font-family:$Montserrat;
+		background:$bg-grey;
+		padding:20px 0;
+	}
+
+	article:nth-of-type(4):before{
+		position:absolute;
+		content:'04';
+		right: -22px;
+		top: 164px;
+		@include font-size(22);
+		font-family:$Montserrat;
+		background:$bg-grey;
+		padding:20px 0;
+	}
+
+		svg {
+		  display: block;
+		  width: 100%;
+		  height: 90px;
+		  background: white;
+		  fill:$bg-grey;
+		  margin-top:150px;
+		}
+}
+
+section.contact{
+	text-align:center;
+	padding:60px 0 0 0;
+	&:hover .upperline,
+	&:hover .lowerline{
+		border-bottom:2px solid $red;
+	}
+
+	p.tag-line{
+		margin:0 0 60px 0;
+	}
+
+	.contact-wrapper{
+		display:flex;
+	}
+
+	.contact-individual{
+		width:33.3%;
+	}
+
+	.sm-wrapper{
+		display:flex;
+		flex-direction:column;
+
+		a{
+			display:flex;
+			align-items:center;
+			margin-bottom:20px;
+			&:hover i{
+				background:$red;
+			}
+			&:focus i{
+				background:$red;
+			}
+		}
+
+		i{
+			color:white;
+			background:$h-black;
+			border-radius:50%;
+			padding:8px;
+			@include font-size(13);
+			margin:0 10px 0 0;
+			transition:all 0.5s ease;
+		}
+	}
+
+	#wpcf7-f31-o1{
+		width:66.6%;
+
+		input{
+			border:2px solid $dark-h-black;
+			border-radius:2px;
+			height:50px;
+			padding-left:20px;
+		}
+
+		textarea{
+			border:2px solid $dark-h-black;
+			border-radius:2px;
+			padding-left:20px;
+			padding-top:15px;
+		}
+
+		p{
+			margin:0 0 20px 0;
+			font-family:$Montserrat;
+		}
+
+		p:first-of-type{
+			width:calc(50% - 5px);
+			float:left;
+			margin-right:5px;
+
+			input{
+				width:100%;
+			}
+
+			input[placeholder]{
+				color:red;
+			}
+		}
+
+		p:nth-of-type(2){
+			width:calc(50% - 5px);
+			float:left;
+			margin-left:5px;
+
+			input{
+				width:100%;
+			}
+		}
+
+		p:nth-of-type(3){
+			
+			input{
+				width:100%;
+			}
+		}
+
+		p:nth-of-type(4){
+			
+			textarea{
+				width:100%;
+			}
+		}
+
+		p:nth-of-type(5){
+			float:left;
+
+			input{
+				background:$h-black;
+				color:white;
+				padding:15px 20px;
+				border:2px solid $h-black;
+				transition:all 0.5s ease;
+				&:hover{
+					border:2px solid $red;
+					background:$red;
+				}
+				&:focus{
+					border:2px solid $red;
+					background:$red;
+				}
+			}
+		}
+	}
+
+	svg {
+	  display: block;
+	  width: 100%;
+	  height: 90px;
+	  background: white;
+	  fill:$button-black;
+	  margin-top:100px;
+	}
+}
+
+// Queries
+
+@import 'queries';
